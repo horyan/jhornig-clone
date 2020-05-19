@@ -14,17 +14,17 @@
       header {
         background-color: #372f2c;
         color: #FFF;
-        padding: 1rem 2rem;
+        padding: .85rem 1.8rem;
       }
       header li:last-child a {
         float: right;
       }
       nav {
         background-color: #FFF;
-        padding: 0 2rem;
+        padding: 0 1.8rem;
       }
       li {
-        display: inline; /* make horizontally adjacent */
+        display: inline; /* horizontally adjacent */
         margin: 1rem;
       }
       nav a {
@@ -43,44 +43,52 @@
         width: 200%; /* extend brown bg */
         overflow-y: scroll; /* scroll second div */
       }
-      .slider div {
-        height: 50%; /* prelim structure */
-      }
       .item-one {
-        position: absolute; /* absolute removes from doc flow */
+        position: absolute; /* remove from doc flow */
+        top: 70%;
+        margin: 0 2.3rem;
       }
-      .item-two { /* block-element */
+      .item-two { /* block-element? */
         position: relative; /* maintain doc flow */
-        left: 50%; /* scoot 50% of parent width from left */
+        left: 50%; /* 50% of parent width from left, not self? */
+        top: 75%; /* 75% of parent width from top, not self? */
       }
       .button {
-        border: 2px solid #000; /* testing black */
-        padding: 1rem 2rem;
+        border: 2px solid #FFF;
+        padding: .7rem 2rem;
+        margin: 0 .6rem;
       }
       .primary {
+        background-color: #FFF;
       }
-      .secondary {
-      }
-      .horizontal {
+      .horizontal, .feature-items {
         text-align: center; /* center container content */
       }
-      .horizontal div:not(.delimiter) {
+      .horizontal div {
         display: inline-block; /* display inline with size */
-        margin: 1rem;
+        margin: 2.3rem 1rem;
+        vertical-align: text-top; /* align div content */
+      }
+      .horizontal div:not(.delimiter) {
         width: 20%;
       }
       .horizontal p {
         text-align: left;
-        /* how to align top */
       }
       .horizontal span {
         display: block;
-        padding: 1rem 0; /* jhornig spacing */
+        padding: 1rem 0;
       }
       .delimiter {
-        display: inline-block;
         border-left: 1px dotted black;
-        height: 1.5rem;
+        height: 5rem;
+      }
+      .feature-items div {
+        display: inline-block;
+        height: 37%;
+        width: 31.8%;
+        margin: 0 .5rem;
+        background-color: #333333;
       }
     </style>
   </head>
@@ -94,13 +102,12 @@
     </header>
     <nav>
       <ul class="flex">
-        <!-- vertically center along parent ul -->
-        <li><a href="/"><img src="" alt="J. Hornig Logo" height="70" width="200"></a></li>
+        <li><a href="/"><img src="" alt="J. Hornig Logo" height="40" width="200"></a></li>
         <li><a href="/shop/">Shop</a></li>
         <li><a href="/gastro-und-buero/">Gastro & Büro</a></li>
         <li><a href="/kurse/">Kurse</a></li>
         <li><a href="/ueber-uns/">Über uns</a></li>
-        <!-- whitespace -->
+        <!-- need whitespace -->
         <li><a href="/kaffee-wissen/">Wissen</a></li>
         <li><a href="/kaffee-zubereitung/">Zubereitung</a></li>
         <li><a href="/kaffee-blog/">Blog</a></li>
@@ -110,7 +117,7 @@
       </ul>
     </nav>
     <section class="light-brown slider">
-      <div class="item-one"><a class="button primary" href="/produkt-kategorie/kaffee/">slider1 left-btn</a><a class="button secondary" href="/produkt-kategorie/tee/">slider1 right-btn</a></div>
+      <div class="item-one"><a class="button primary" href="/produkt-kategorie/kaffee/">slider1 left-btn</a><a class="button" href="/produkt-kategorie/tee/">slider1 right-btn</a></div>
       <div class="item-two"><a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">slider2 btn</a></div>
     </section>
     <section class="horizontal">
@@ -119,6 +126,11 @@
       <div><p>Schnell bei dir zu Hause<span>innerhalb von 2-3 Werktagen</span></p></div>
       <div class="delimiter"></div>
       <div><p>Geprüfter Online Shop<span>Trusted Shops zertifiziert</span></p></div>
+    </section>
+    <section class="feature-items">
+      <div></div>
+      <div></div>
+      <div></div>
     </section>
   </body>
 </html>
