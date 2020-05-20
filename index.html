@@ -22,6 +22,9 @@
       nav {
         background-color: #FFF;
         padding: 0 1.8rem;
+        position: sticky;
+        top: 0;
+        z-index: 1;
       }
       li {
         display: inline; /* horizontally adjacent */
@@ -61,12 +64,13 @@
       .primary {
         background-color: #FFF;
       }
-      .horizontal, .feature-items {
+      .horizontal, .feature-items, .divider, .coffee-selection {
         text-align: center; /* center container content */
+        margin: 3rem 0;
       }
       .horizontal div {
         display: inline-block; /* display inline with size */
-        margin: 2.3rem 1rem;
+        margin: 0 1rem;
         vertical-align: text-top; /* align div content */
       }
       .horizontal div:not(.delimiter) {
@@ -89,6 +93,31 @@
         width: 31.8%;
         margin: 0 .5rem;
         background-color: #333333;
+      }
+      .divider div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .divider hr {
+        width: 20vw;
+      }
+      .special {
+        position: absolute;
+        height: 1rem;
+        width: 3rem;
+        background-color: red;
+      }
+      .coffee-selection div {
+        display: inline-block;
+      }
+      .coffee-selection span {
+        display: block;
+      }
+      .coffee-selection div:not(.special) {
+        background-color: #bbbbbb;
+        height: 55vh;
+        width: 12%;
+        margin: 0 6%;
       }
     </style>
   </head>
@@ -131,6 +160,19 @@
       <div></div>
       <div></div>
       <div></div>
+    </section>
+    <section class="divider">
+      <div><hr></div>
+      <div><p>Klick dich durch unser Kaffee-sortiment</p></div>
+      <div><hr></div>
+    </section>
+    <section class="coffee-selection">
+      <div class="special"><p>-25%</p></div>
+      <div><img width="100%" height="70%"><p><span>category</span><span>name</span><span>rating</span><span>price</span><span>something1</span><span>something2</span></p></div>
+      <div><img width="100%" height="70%"><p><span>category</span><span>name</span><span>rating</span><span>price</span><span>something1</span><span>something2</span></p></div>
+      <div><img width="100%" height="70%"><p><span>category</span><span>name</span><span>rating</span><span>price</span><span>something1</span><span>something2</span></p></div>
+      <div class="special"><p>-25%</p></div>
+      <div><img width="100%" height="70%"><p><span>category</span><span>name</span><span>rating</span><span>price</span><span>something1</span><span>something2</span></p></div>
     </section>
   </body>
 </html>
