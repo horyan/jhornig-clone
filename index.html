@@ -71,7 +71,7 @@
       .primary {
         background-color: #FFF;
       }
-      #policies, #feature-items, .divider, #coffees, #teas {
+      #policies, #features, .divider, #coffees, #teas {
         text-align: center; /* h-center children */
         margin: 3rem 0;
       }
@@ -116,9 +116,9 @@
       #coffees span, #teas span {
         display: block;
       }
-      #coffees div:not(.special) {
+      #coffees div:not(.special), #teas div {
         background-color: #bbbbbb;
-        height: 55vh;
+        height: 60vh;
         width: 12%;
         margin: 0 6%;
       }
@@ -155,12 +155,6 @@
       }
       .w-quarter {
         width: 25%;
-      }
-      #teas div {
-        background-color: #bbbbbb;
-        height: 55vh;
-        width: 12%;
-        margin: 0 6%;
       }
     </style>
   </head>
@@ -210,11 +204,11 @@
           <a href="/mein-account/">Anmelden</a>
         </li>
         <li>
-          <a href="/warenkorb/"></a>0,00 € [cart]
+          <a href="/warenkorb/">0,00 € [cart]</a>
         </li>
       </ul>
     </nav>
-    <section class="row slider">
+    <section class="slider">
       <div class="item-one">
         <a class="button primary" href="/produkt-kategorie/kaffee/">slider1 left-btn</a>
         <a class="button" href="/produkt-kategorie/tee/">slider1 right-btn</a>
@@ -230,8 +224,7 @@
       <div class="delimiter">
       </div>
       <div>
-        <p>Schnell bei dir zu Hause<span>innerhalb von 2-3 Werktagen</span>
-        </p>
+        <p>Schnell bei dir zu Hause<span>innerhalb von 2-3 Werktagen</span></p>
       </div>
       <div class="delimiter">
       </div>
