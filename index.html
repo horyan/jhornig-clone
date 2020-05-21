@@ -8,6 +8,9 @@
         padding: 0;
         box-sizing: border-box;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         overflow-x: hidden;
       }
@@ -27,7 +30,7 @@
         z-index: 1;
       }
       li {
-        display: inline; /* horizontal */
+        display: inline;
         margin: 1rem;
       }
       nav a {
@@ -46,19 +49,21 @@
         display: inline-block; /* display inline with size */
         font-size: 16px; /* temp structure */
       }
-      .slider {
+      #banner {
         background-color: #542c00;
-        position: relative; /* maintain */
-        height: 70%;
         width: 200%; /* extend */
+        height: 70%;
+      }
+      .slider {
+        position: relative; /* maintain */
         overflow-y: scroll; /* scroll 2nd div */
       }
-      .item-one {
+      #banner-a {
         position: absolute; /* remove */
         top: 70%;
         margin: 0 2.3rem;
       }
-      .item-two {
+      #banner-b {
         position: relative; /* maintain */
         left: 50%; /* move parent half width */
         top: 75%; /* move parent 75% width */
@@ -118,12 +123,12 @@
       }
       #coffees div:not(.special), #teas div {
         background-color: #bbbbbb;
-        height: 60vh;
+        height: 60%;
         width: 12%;
         margin: 0 6%;
       }
       #service-a, #service-c, #service-d, #service-e, #service-f {
-        height: 40vh;
+        height: 40%;
       }
       #service-c, #service-f {
         left: 25%; /* move parent quarter width */
@@ -133,7 +138,7 @@
       }
       #service-b {
         background-color: blue;
-        height: 80vh;
+        height: 80%;
         position: absolute;
       }
       #service-c {
@@ -155,6 +160,34 @@
       }
       .w-quarter {
         width: 25%;
+      }
+      #newsletter {
+        height: 65%;
+        background-color: #2a1600;
+        color: #FFF;
+      }
+      #panels {
+        width: 300%;
+        height: 70%;
+        overflow-y: hidden; /* hide rel b+c */
+      }
+      #panel-a, #panel-b, #panel-c {
+        position: relative;
+        /* TODO: h-center */ 
+      }
+      #panel-a div, #panel-b div, #panel-c div {
+        height: 60vh;
+        width: 8%;
+        margin: 0 2rem;
+        background-color: lightblue;
+      }
+      #panel-b {
+        left: 33.33%;
+        bottom: 60vh;
+      }
+      #panel-c {
+        left: 66.66%;
+        bottom: 120vh;
       }
     </style>
   </head>
@@ -208,13 +241,13 @@
         </li>
       </ul>
     </nav>
-    <section class="slider">
-      <div class="item-one">
-        <a class="button primary" href="/produkt-kategorie/kaffee/">slider1 left-btn</a>
-        <a class="button" href="/produkt-kategorie/tee/">slider1 right-btn</a>
+    <section id="banner" class="slider">
+      <div id="banner-a">
+        <a class="button primary" href="/produkt-kategorie/kaffee/">left-btn</a>
+        <a class="button" href="/produkt-kategorie/tee/">right-btn</a>
       </div>
-      <div class="item-two">
-        <a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">slider2 btn</a>
+      <div id="banner-b">
+        <a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">btn</a>
       </div>
     </section>
     <section id="policies" class="row">
@@ -242,7 +275,7 @@
         <hr>
       </div>
       <div>
-        <p>Klick dich durch unser Kaffee-sortiment</p>
+        <h2>Klick dich durch unser Kaffee-sortiment</h2>
       </div>
       <div>
         <hr>
@@ -317,7 +350,7 @@
         <hr>
       </div>
       <div>
-        <p>Heißes für die Tasse</p>
+        <h2>Heißes für die Tasse</h2>
       </div>
       <div>
         <hr>
@@ -367,6 +400,43 @@
           <span>something1</span>
           <span>something2</span>
         </p>
+      </div>
+    </section>
+    <section id="newsletter">
+      <div>
+        <h2>J. HORNIG NEWSLETTER</h2>
+        <p>Melde dich für unseren Newsletter an und du erhältst einen 5 € Gutschein für deine erste Bestellung!</p>
+        <input type"text" placeholder="Deine E-Mail-Adresse">
+        <label><input type="checkbox"><a href="/datenschutz">Ich habe die Datenschutzerklärung gelesen und akzeptiert.</a></label>
+        <input type="submit" value="anmelden">
+      </div>
+    </section>
+    <section class="divider">
+      <div>
+        <hr>
+      </div>
+      <div>
+        <h2>Neues aus unserem Kaffee-Blog</h2>
+      </div>
+      <div>
+        <hr>
+      </div>
+    </section>
+    <section id="panels" class="slider">
+      <div id="panel-a" class="row">
+        <div>18</div>
+        <div>23</div>
+        <div>31</div>
+      </div>
+      <div id="panel-b" class="row">
+        <div>20</div>
+        <div>11</div>
+        <div>14</div>
+      </div>
+      <div id="panel-c" class="row">
+        <div>08</div>
+        <div>30</div>
+        <div>18</div>
       </div>
     </section>
   </body>
