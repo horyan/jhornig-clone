@@ -8,16 +8,17 @@
         padding: 0;
         box-sizing: border-box;
       }
-      body {
-        overflow-x: hidden;
-      }
       header {
         background-color: #372f2c;
         color: #FFF;
         padding: .85rem 1.8rem;
+        font-size: 12px;
       }
       header li:last-child a {
         float: right;
+      }
+      header a {
+        color: #d7d5d4;
       }
       nav {
         background-color: #FFF;
@@ -30,8 +31,17 @@
         display: inline;
         margin: 1rem;
       }
+      a {
+        text-decoration: none;
+      }
+      header, footer a:hover {
+        color: #FFF;
+      }
       nav a {
         color: #000;
+      }
+      nav li:not(:first-child) a:hover {
+        border-bottom: 3px solid #442400;
       }
       .flex {
         display: flex;
@@ -43,56 +53,73 @@
         font-size: 0; /* remove whitespace */
       }
       .row div {
-        display: inline-block; /* display inline with size */
+        display: inline-block;
         font-size: 16px; /* temp structure */
       }
       #banner {
         background-color: #542c00;
-        width: 200%; /* extend */
+        width: 200%;
         height: 70%;
       }
-      .slider {
-        position: relative; /* maintain */
-        overflow-y: scroll; /* scroll 2nd div */
+      #banner-a, #banner-b {
+        height: 100%;
+        width: 50%;
       }
-      #banner-a {
-        position: absolute; /* remove */
-        top: 70%;
-        margin: 0 2.3rem;
+      #banner-a div, #banner-b div {
+        color: #FFF;
+        text-align: center;
+        border: 1px solid black;
+        position: relative;
+        vertical-align: top; /* pre-adjust */
       }
-      #banner-b {
-        position: relative; /* maintain */
-        left: 50%; /* move parent half width */
-        top: 75%; /* move parent 75% width */
+      #banner-a div {
+        width: 35%;
+        height: 40%;
+        top: 20%;
+      }
+      #banner-b div {
+        width: 30%;
+        height: 50%;
+        top: 30%;
       }
       .button {
         border: 2px solid #FFF;
         padding: .7rem 2rem;
         margin: 0 .6rem;
       }
+      .button:hover {
+        background-color: #FFF;
+        color: #666666;
+      }
       .primary {
         background-color: #FFF;
       }
+      .primary:hover {
+        color: #666666;
+        background-color: #cccccc
+      }
       #policies, #features, .divider, #coffees, #teas {
-        text-align: center; /* h-center children */
+        text-align: center;
         margin: 3rem 0;
       }
       #policies div {
         margin: 0 1rem;
-        vertical-align: text-top;
+        vertical-align: top;
       }
       #policies div:not(.delimiter) {
         width: 20%;
       }
       #policies p {
+        color: #555555;
         text-align: left;
       }
       #policies span {
+        color: #777777;
         display: block;
         padding: 1rem 0;
       }
       .delimiter {
-        border-left: 1px dotted black;
+        border-left: 1px dotted #dddddd;
         height: 5rem;
       }
       #features div {
@@ -100,56 +127,59 @@
         height: 37%;
         width: 31.8%;
         margin: 0 .5rem;
-        background-color: #333333;
+        background-color: #442400;
+      }
+      #features div:last-child {
+        background-color: #341c00;
       }
       .divider div {
         display: inline-block;
         vertical-align: middle;
+        color: #555555;
       }
       .divider hr {
         width: 20vw;
+        color: #ededed;
       }
       .special {
         position: absolute;
-        height: 1rem;
-        width: 3rem;
-        background-color: red;
+        height: 2.5rem;
+        width: 2.5rem;
+        background-color: #e63126;
+        border-radius: 100%;
+        color: #FFF;
       }
       #coffees span, #teas span {
         display: block;
       }
       #coffees div:not(.special), #teas div {
         background-color: #bbbbbb;
-        height: 60%;
+        height: 65%;
         width: 12%;
         margin: 0 6%;
+      }
+      /* TODO: vertical-align, margin */
+      #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
+        background-color: #442400;
+        color: #FFF;
       }
       #service-a, #service-c, #service-d, #service-e, #service-f {
         height: 40%;
       }
       #service-c, #service-f {
-        left: 25%; /* move parent quarter width */
+        left: 25%;
       }
       #service-a {
-        background-color: green;
+        background-color: #cccccc;
       }
       #service-b {
-        background-color: blue;
         height: 80%;
         position: absolute;
       }
       #service-c {
-        background-color: coral;
         position: relative;
       }
-      #service-d {
-        background-color: yellow;
-      }
-      #service-e {
-        background-color: orange;
-      }
       #service-f {
-        background-color: teal;
         position: relative;
       }
       .w-half {
@@ -163,41 +193,66 @@
         background-color: #2a1600;
         color: #FFF;
       }
+      #newsletter div {
+        width: 38%;
+        padding: 2rem;
+      }
+      #newsletter div * {
+        margin: .8rem 0;
+      }
+      #newsletter p {
+        color: #f1f1f1;
+      }
+      #newsletter input[type="text"], #register-btn {
+        display: block;
+      }
+      #newsletter input[type="text"] {
+        width: 100%;
+        height: 2rem;
+      }
+      #newsletter input[type="checkbox"] {
+        margin: 0 4px;
+      }
+      #newsletter a {
+        color: #FFF;
+        margin: 0 4px;
+      }
+      #register-btn {
+        background-color: #552d00;
+        border: 1px solid #552d00;
+        padding: .5rem 1rem;
+        color: #FFF;
+      }
+      #register-btn:hover {
+        background-color: #442400;
+      }
       #panels {
         width: 300%;
         height: 70%;
-        overflow-y: hidden; /* hide rel b+c */
       }
       #panel-a, #panel-b, #panel-c {
         position: relative;
-        /* TODO: h-center */ 
+        text-align: center;
+        width: 33.33%;
       }
       #panel-a div, #panel-b div, #panel-c div {
         height: 60vh;
-        width: 8%;
+        width: 20%;
         margin: 0 2rem;
         background-color: lightblue;
       }
-      #panel-b {
-        left: 33.33%;
-        bottom: 60vh;
-      }
-      #panel-c {
-        left: 66.66%;
-        bottom: 120vh;
-      }
       #info {
         background-color: #f3ebe3;
-        height: 150vh;
+        height: 140vh;
         text-align: center;
       }
       #info div {
         margin: 1.5rem;
         text-align: left;
         width: 40%;
-        vertical-align: top; /* not baseline */
+        vertical-align: top;
         position: relative;
-        height: 15%;
+        height: 20%;
         border: 1px dotted red;
       }
       #info .contact {
@@ -208,7 +263,20 @@
       }
       footer {
         background-color: #372f2c;
-        height: 15%;
+        height: 12%;
+        text-align: center;
+      }
+      footer div {
+        padding: 1rem 0;
+      }
+      footer li {
+        display: inline;
+      }
+      footer a {
+        color: #878280;
+      }
+      footer p {
+        color: #9b9796;
       }
     </style>
   </head>
@@ -262,13 +330,22 @@
         </li>
       </ul>
     </nav>
-    <section id="banner" class="slider">
+    <section id="banner" class="row">
       <div id="banner-a">
-        <a class="button primary" href="/produkt-kategorie/kaffee/">left-btn</a>
-        <a class="button" href="/produkt-kategorie/tee/">right-btn</a>
+        <div>
+          <h2>Alles für die Tasse</h2>
+          <h3>J. Hornig Kaffee & Tee online kaufen</h3>
+          <a class="button primary" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
+          <a class="button" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
+        </div>
       </div>
       <div id="banner-b">
-        <a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">btn</a>
+        <div>
+          <h2>Neu im Sortiment</h2>
+          <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
+          <h3>Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
+          <a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
+        </div>
       </div>
     </section>
     <section id="policies" class="row">
@@ -427,9 +504,9 @@
       <div>
         <h2>J. HORNIG NEWSLETTER</h2>
         <p>Melde dich für unseren Newsletter an und du erhältst einen 5 € Gutschein für deine erste Bestellung!</p>
-        <input type"text" placeholder="Deine E-Mail-Adresse">
+        <input type="text" placeholder="Deine E-Mail-Adresse">
         <label><input type="checkbox"><a href="/datenschutz">Ich habe die Datenschutzerklärung gelesen und akzeptiert.</a></label>
-        <input type="submit" value="anmelden">
+        <input id="register-btn" type="submit" value="ANMELDEN">
       </div>
     </section>
     <section class="divider">
@@ -443,7 +520,7 @@
         <hr>
       </div>
     </section>
-    <section id="panels" class="slider">
+    <section id="panels" class="row">
       <div id="panel-a" class="row">
         <div>18</div>
         <div>23</div>
@@ -532,6 +609,19 @@
       </div>
     </section>
     <footer>
+      <div>
+        <ul>
+          <li><a href="/lieferbedingungen/">Lieferbedingungen</a></li>
+          <li><a href="/zahlungsweisen/">Zahlungsweisen</a></li>
+          <li><a href="/widerrufsrecht/">Widerrufsrecht</a></li>
+          <li><a href="/agb/">AGB</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+          <li><a href="/teilnahmebedingungen/">Teilnahmebedingungen</a></li>
+          <li><a href="/reklamation/">Reklamation</a></li>
+          <li><a href="/impressum/">Impressum</a></li>
+        </ul>
+        <p>© J. Hornig 2020</p>
+      </div>
     </footer>
   </body>
 </html>
