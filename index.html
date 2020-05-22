@@ -259,20 +259,35 @@
         height: 140vh;
         text-align: center;
       }
+      #info hr {
+        width: 20px;
+        color: #dad3cc;
+      }
       #info div {
         margin: 1.5rem;
         text-align: left;
         width: 40%;
         vertical-align: top;
         position: relative;
-        height: 20%;
-        border: 1px dotted red;
+        height: 17%;
+        border: 1px dotted #000;
       }
-      #info .contact {
+      #info div * {
+        margin: .5rem 0;
+      }
+      #info .contact { /* specificity */
         width: 20%;
+        height: 23%;
+      }
+      #info p {
+        color: #777777;
       }
       .contact a {
         display: block;
+        color: #552d00;
+      }
+      .contact a:hover {
+        color: #e63126;
       }
       footer {
         background-color: #372f2c;
@@ -290,6 +305,7 @@
       }
       footer p {
         color: #9b9796;
+        margin-top: .7rem;
       }
     </style>
   </head>
@@ -575,38 +591,38 @@
       <div class="contact">
         <p>Über J. Hornig</p>
         <hr>
-        <a>Wofür wir stehen</a>
-        <a>Über uns</a>
-        <a>J. Hornig Kaffeebar</a>
-        <a>Kaffee-Blog</a>
-        <a>Kontakt</a>
-        <a>Presse</a>
-        <a>Jobs</a></a>
+        <a href="/ueber-uns/wofuer-wir-stehen/">Wofür wir stehen</a>
+        <a href="/ueber-uns/">Über uns</a>
+        <a href="/ueber-uns/j-hornig-kaffeebar/">J. Hornig Kaffeebar</a>
+        <a href="/kaffee-blog/">Kaffee-Blog</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a href="/presse/">Presse</a>
+        <a href="/karriere/">Jobs</a></a>
       </div>
       <div class="contact">
         <p>Social Media
         <hr>
-        <a>Facebook</a>
-        <a>Instagram</a>
-        <a>Pinterest</a>
-        <a>YouTube</a>
+        <a href="https://facebook.com/jhornigcoffee/">Facebook</a>
+        <a href="https://www.instagram.com/jhornigcoffee/">Instagram</a>
+        <a href="https://www.pinterest.at/jhornigcoffee/">Pinterest</a>
+        <a href="https://www.youtube.com/user/hornigkaffee">YouTube</a>
       </div>
       <div class="contact">
         <p>Kaffee kaufen</p>
         <hr>
-        <a>Ganze Bohnen</a>
-        <a>Mahlkaffee</a>
-        <a>Spezialitätenkaffee</a>
-        <a>Cold Brew</a>
-        <a>Bio und Fairtrade</a>
-        <a>Kapseln</a>
+        <a href="/produkt-kategorie/kaffee/ganze_bohne-de/">Ganze Bohnen</a>
+        <a href="/produkt-kategorie/kaffee/gemahlen/">Mahlkaffee</a>
+        <a href="/produkt-kategorie/kaffee/spezialitaetenkaffee/">Spezialitätenkaffee</a>
+        <a href="/produkt-kategorie/kaffee/cold_brew/">Cold Brew</a>
+        <a href="/zertifikate/fairtrade/">Bio und Fairtrade</a>
+        <a href="/produkt-kategorie/kaffee/kapseln/">Kapseln</a>
       </div>
       <div class="contact">
         <p>Tee kaufen</p>
         <hr>
-        <a>Bio-Tee</a>
-        <a>Doppelkammer</a>
-        <a>Triangel</a>
+        <a href="/produkt-kategorie/tee/triangel/">Bio-Tee</a>
+        <a href="/produkt-kategorie/tee/doppelkammer/">Doppelkammer</a>
+        <a href="/produkt-kategorie/tee/triangel/">Triangel</a>
       </div>
       <div class="contact">
         <p>Zahlungsarten</p>
