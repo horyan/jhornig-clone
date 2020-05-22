@@ -1,0 +1,304 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: #372f2c;
+  color: #FFF;
+  padding: .85rem 1.8rem;
+  font-size: 12px;
+}
+header li:last-child a {
+  float: right;
+}
+header a {
+  color: #d7d5d4;
+}
+nav {
+  background-color: #FFF;
+  padding: 0 1.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+li {
+  display: inline;
+  margin: 1rem;
+}
+a {
+  text-decoration: none;
+}
+header, footer a:hover {
+  color: #FFF;
+}
+nav a {
+  color: #000;
+}
+nav li:not(:first-child) a:hover {
+  border-bottom: 3px solid #442400;
+}
+.flex {
+  display: flex;
+}
+.v-center {
+  align-items: center;
+}
+.row {
+  font-size: 0; /* remove whitespace */
+}
+.row div {
+  display: inline-block;
+  font-size: 16px; /* temp structure */
+}
+#banner {
+  background-color: #542c00;
+  width: 200%;
+  height: 70%;
+}
+.banner-item {
+  height: 100%;
+  width: 50%;
+  color: #FFF;
+  vertical-align: top; /* pre-adjust */
+}
+#banner-a, #banner-b {
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+}
+#banner-a *, #banner-b * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#banner-a {
+  width: 33%;
+  height: 40%;
+  top: 40%;
+  left: 2%;
+}
+#banner-b {
+  width: 32%;
+  height: 50%;
+  top: 30%;
+  left: 20%;
+}
+.button {
+  border: 2px solid #FFF;
+  padding: .7rem 2rem;
+  margin: 0 .5rem;
+  display: inline-block;
+}
+.primary {
+  background-color: #FFF;
+  color: #666666;
+}
+.primary:hover {
+  background-color: #cccccc;
+}
+.secondary {
+  color: #f1f1f1;
+}
+.secondary:hover {
+  background-color: #FFF;
+  color: #666666;
+}
+.light {
+  color: #f1f1f1;
+}
+#policies, #features, .divider, #coffees, #teas {
+  text-align: center;
+  margin: 3rem 0;
+}
+#policies div {
+  margin: 0 1rem;
+  vertical-align: top;
+}
+#policies div:not(.delimiter) {
+  width: 20%;
+}
+#policies p {
+  color: #555555;
+  text-align: left;
+}
+#policies span {
+  color: #777777;
+  display: block;
+  padding: 1rem 0;
+}
+.delimiter {
+  border-left: 1px dotted #dddddd;
+  height: 5rem;
+}
+#features div {
+  display: inline-block;
+  height: 37%;
+  width: 31.8%;
+  margin: 0 .5rem;
+  background-color: #442400;
+}
+#features div:last-child {
+  background-color: #341c00;
+}
+.divider div {
+  display: inline-block;
+  vertical-align: middle;
+  color: #555555;
+}
+.divider hr {
+  width: 20vw;
+  color: #ededed;
+}
+.special {
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #e63126;
+  border-radius: 100%;
+  color: #FFF;
+}
+#coffees span, #teas span {
+  display: block;
+}
+#coffees div:not(.special), #teas div {
+  background-color: #bbbbbb;
+  height: 65%;
+  width: 12%;
+  margin: 0 6%;
+}
+/* TODO: vertical-align, margin */
+#service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
+  background-color: #442400;
+  color: #FFF;
+}
+#service-a, #service-c, #service-d, #service-e, #service-f {
+  height: 40%;
+}
+#service-c, #service-f {
+  left: 25%;
+}
+#service-a {
+  background-color: #cccccc;
+}
+#service-b {
+  height: 80%;
+  position: absolute;
+}
+#service-c {
+  position: relative;
+}
+#service-f {
+  position: relative;
+}
+.w-half {
+  width: 50%;
+}
+.w-quarter {
+  width: 25%;
+}
+#newsletter {
+  height: 65%;
+  background-color: #2a1600;
+  color: #FFF;
+}
+#newsletter div {
+  width: 38%;
+  padding: 2rem;
+}
+#newsletter div * {
+  margin: .8rem 0;
+}
+#newsletter p {
+  color: #f1f1f1;
+}
+#newsletter input[type="text"], #register-btn {
+  display: block;
+}
+#newsletter input[type="text"] {
+  width: 100%;
+  height: 2rem;
+}
+#newsletter input[type="checkbox"] {
+  margin: 0 4px;
+}
+#newsletter a {
+  color: #FFF;
+  margin: 0 4px;
+}
+#register-btn {
+  background-color: #552d00;
+  border: 1px solid #552d00;
+  padding: .5rem 1rem;
+  color: #FFF;
+}
+#register-btn:hover {
+  background-color: #442400;
+}
+#panels {
+  width: 300%;
+  height: 70%;
+}
+.panel-item {
+  position: relative;
+  text-align: center;
+  width: 33.33%;
+}
+.panel-item div {
+  height: 60vh;
+  width: 20%;
+  margin: 0 2rem;
+  border: 1px dotted black;
+}
+#info {
+  background-color: #f3ebe3;
+  height: 140vh;
+  text-align: center;
+}
+#info hr {
+  width: 20px;
+  color: #dad3cc;
+}
+#info div {
+  margin: 1.5rem;
+  text-align: left;
+  width: 40%;
+  vertical-align: top;
+  position: relative;
+  height: 17%;
+  border: 1px dotted #000;
+}
+#info div * {
+  margin: .5rem 0;
+}
+#info .contact { /* specificity */
+  width: 20%;
+  height: 23%;
+}
+#info p {
+  color: #777777;
+}
+.contact a {
+  display: block;
+  color: #552d00;
+}
+.contact a:hover {
+  color: #e63126;
+}
+footer {
+  background-color: #372f2c;
+  height: 12%;
+  text-align: center;
+}
+footer div {
+  padding: 1rem 0;
+}
+footer li {
+  display: inline;
+}
+footer a {
+  color: #878280;
+}
+footer p {
+  color: #9b9796;
+  margin-top: .7rem;
+}
