@@ -61,42 +61,55 @@
         width: 200%;
         height: 70%;
       }
-      #banner-a, #banner-b {
+      .banner-item {
         height: 100%;
         width: 50%;
-      }
-      #banner-a div, #banner-b div {
         color: #FFF;
+        vertical-align: top; /* pre-adjust */
+      }
+      #banner-a, #banner-b {
         text-align: center;
         border: 1px solid black;
         position: relative;
-        vertical-align: top; /* pre-adjust */
       }
-      #banner-a div {
-        width: 35%;
+      #banner-a *, #banner-b * {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      #banner-a {
+        width: 33%;
         height: 40%;
-        top: 20%;
+        top: 40%;
+        left: 2%;
       }
-      #banner-b div {
-        width: 30%;
+      #banner-b {
+        width: 32%;
         height: 50%;
         top: 30%;
+        left: 20%;
       }
       .button {
         border: 2px solid #FFF;
         padding: .7rem 2rem;
-        margin: 0 .6rem;
-      }
-      .button:hover {
-        background-color: #FFF;
-        color: #666666;
+        margin: 0 .5rem;
+        display: inline-block;
       }
       .primary {
         background-color: #FFF;
+        color: #666666;
       }
       .primary:hover {
+        background-color: #cccccc;
+      }
+      .secondary {
+        color: #f1f1f1;
+      }
+      .secondary:hover {
+        background-color: #FFF;
         color: #666666;
-        background-color: #cccccc
+      }
+      .light {
+        color: #f1f1f1;
       }
       #policies, #features, .divider, #coffees, #teas {
         text-align: center;
@@ -230,16 +243,16 @@
         width: 300%;
         height: 70%;
       }
-      #panel-a, #panel-b, #panel-c {
+      .panel-item {
         position: relative;
         text-align: center;
         width: 33.33%;
       }
-      #panel-a div, #panel-b div, #panel-c div {
+      .panel-item div {
         height: 60vh;
         width: 20%;
         margin: 0 2rem;
-        background-color: lightblue;
+        border: 1px dotted black;
       }
       #info {
         background-color: #f3ebe3;
@@ -331,19 +344,19 @@
       </ul>
     </nav>
     <section id="banner" class="row">
-      <div id="banner-a">
-        <div>
+      <div class="banner-item">
+        <div id="banner-a">
           <h2>Alles für die Tasse</h2>
           <h3>J. Hornig Kaffee & Tee online kaufen</h3>
           <a class="button primary" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
-          <a class="button" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
+          <a class="button secondary" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
         </div>
       </div>
-      <div id="banner-b">
-        <div>
+      <div class="banner-item">
+        <div id="banner-b">
           <h2>Neu im Sortiment</h2>
           <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
-          <h3>Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
+          <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
           <a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
         </div>
       </div>
@@ -521,17 +534,17 @@
       </div>
     </section>
     <section id="panels" class="row">
-      <div id="panel-a" class="row">
+      <div class="panel-item row">
         <div>18</div>
         <div>23</div>
         <div>31</div>
       </div>
-      <div id="panel-b" class="row">
+      <div class="panel-item row">
         <div>20</div>
         <div>11</div>
         <div>14</div>
       </div>
-      <div id="panel-c" class="row">
+      <div class="panel-item row">
         <div>08</div>
         <div>30</div>
         <div>18</div>
