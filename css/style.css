@@ -170,35 +170,45 @@ nav li:not(:first-child) a:hover {
   width: 100%;
   margin: 0; /* already nested */
 }
-/* TODO: vertical-align, margin */
+#services {
+  width: 100%;
+  height: 80%;
+}
+.rel-top {
+  position: relative;
+  vertical-align: top;
+}
 #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
   background-color: #442400;
   color: #FFF;
 }
-#service-a, #service-c, #service-d, #service-e, #service-f {
-  height: 40%;
-}
-#service-c, #service-f {
-  left: 25%;
+#service-a, #service-b, #service-c, #service-e, #service-f {
+  height: 50%;
 }
 #service-a {
   background-color: #cccccc;
 }
-#service-b {
-  height: 80%;
-  position: absolute;
+#service-d {
+  height: 100%;
 }
-#service-c {
-  position: relative;
-}
-#service-f {
-  position: relative;
+.w-full {
+  width: 100%;
 }
 .w-half {
   width: 50%;
 }
-.w-quarter {
-  width: 25%;
+.ib {
+  display: inline-block;
+}
+.degap {
+  font-size: 0;
+}
+.font {
+  font-size: 16px;
+}
+.rel-top {
+  position: relative;
+  vertical-align: top;
 }
 #newsletter {
   height: 65%;
