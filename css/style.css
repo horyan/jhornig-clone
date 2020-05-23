@@ -136,6 +136,7 @@ nav li:not(:first-child) a:hover {
   width: 31.8%;
   margin: 0 .5rem;
   background-color: #442400;
+  color: #FFF;
 }
 #features div:last-child {
   background-color: #341c00;
