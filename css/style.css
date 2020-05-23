@@ -78,6 +78,8 @@ nav li:not(:first-child) a:hover {
 }
 #banner-b {
   background: url("../assets/JHornig-LaJoya-Neu-im-Sortiment-1.jpg");
+  background-position: center;
+  background-size: 100% 100%;
 }
 #a {
   width: 33%;
@@ -160,12 +162,15 @@ nav li:not(:first-child) a:hover {
 }
 #cold-brew {
   background: url("../assets/Cold-Brew-Sparkling-Orange.jpg");
+  background-size: 100% 100%;
 }
 #gastro {
   background: url("../assets/JHornig-Kaffee-fuer-die-Gastro.jpg");
+  background-size: 100% 100%;
 }
 #buro {
   background: url("../assets/JHornig-Office-As-A-Service-1920x1178.jpg");
+  background-size: 100% 100%;
 }
 .divider div {
   display: inline-block;
@@ -186,39 +191,50 @@ nav li:not(:first-child) a:hover {
 }
 #spezial {
   background: url("../assets/JHornig-Spezial-Ganze-Bohne-247x346.jpg");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 300px;
 }
 #classico {
   background: url("../assets/JHornig-Caffe-Crema-Classico-Ganze-Bohne-247x346.jpg");
+  background-size: 100% 100%;
 }
 #bio {
   background: url("../assets/JHornig-Caffe-Crema-Bio-Ganze-Bohne-247x346.jpg");
+  background-size: 100% 100%;
 }
 #entcoff {
   background: url("../assets/JHornig-Entcoff-Ganze-Bohne-247x346.jpg");
+  background-size: 100% 100%;
 }
-#coffees div.product, #teas div.product {
-  height: 250px;
-  margin: 0; /* already nested */
+.product {
+  height: 450px;
+  width: 15%;
+  margin: 0 4%;
 }
-#coffees div:not(.discount), #teas div {
-  height: 200px;
-  width: 25%;
+.product-item {
+  width: 100%;
+  height: 300px;
 }
 #früchtetee {
   background: url("../assets/JHornig-Bio-Fruechte-Tee-1-247x346.jpeg");
+  background-size: 100% 100%;
 }
 #früchte {
   background: url("../assets/JHornig-Bio-Wilde-Fruechte-Tee-247x346.jpeg");
+  background-size: 100% 100%;
 }
 #pfefferminze {
   background: url("../assets/JHornig-Bio-Pfefferminze-Tee-247x346.jpeg");
+  background-size: 100% 100%;
 }
 #orange {
   background: url("../assets/JHornig-Bio-Orange-Tee-247x346.jpeg");
+  background-size: 100% 100%;
 }
 #services {
   width: 100%;
-  height: 400px;
+  height: 504px;
 }
 .rel-top {
   position: relative;
@@ -233,13 +249,33 @@ nav li:not(:first-child) a:hover {
   margin: 1px;
 }
 #service-a, #service-b, #service-c, #service-e, #service-f {
-  height: 200px;
+  height: 252px;
 }
 #service-a {
   background-color: #cccccc;
+  background: url("../assets/JHornig-Kaffeebar-1070-Wien.jpg");
+  background-size: 100% 100%;
+}
+#service-b {
+  background: url("../assets/Wie-wir-bei-JHornig-roesten.jpg");
+  background-size: 100% 100%;
+}
+#service-c {
+  background: url("../assets/JHornig-Kaffeemobil.jpg");
+  background-size: 100% 100%;
 }
 #service-d {
-  height: 402px;
+  height: 505px;
+  background: url("../assets/JHornig-Barista-Kurse.jpg");
+  background-size: 100% 100%;
+}
+#service-e {
+  background: url("../assets/JHornig-Direct-Trade.jpg");
+  background-size: 100% 100%;
+}
+#service-f {
+  background: url("../assets/JHornig-Kaffee-richtig-zubereiten.jpg");
+  background-size: 100% 100%;
 }
 .w-whole {
   width: 100%;
