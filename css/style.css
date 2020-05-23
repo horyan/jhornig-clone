@@ -224,9 +224,13 @@ nav li:not(:first-child) a:hover {
   position: relative;
   vertical-align: top;
 }
+#services {
+  text-align: center;
+}
 #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
   background-color: #442400;
   color: #FFF;
+  margin: 1px;
 }
 #service-a, #service-b, #service-c, #service-e, #service-f {
   height: 200px;
@@ -235,13 +239,16 @@ nav li:not(:first-child) a:hover {
   background-color: #cccccc;
 }
 #service-d {
-  height: 400px;
+  height: 402px;
 }
-.w-full {
+.w-whole {
   width: 100%;
 }
+.w-full {
+  width: 99.8%;
+}
 .w-half {
-  width: 50%;
+  width: 49.7%;
 }
 .ib {
   display: inline-block;
