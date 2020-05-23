@@ -122,7 +122,7 @@ nav li:not(:first-child) a:hover {
 .light {
   color: #f1f1f1;
 }
-#policies, #features, .divider, #coffees, #teas {
+#policies, #featured, .divider, #coffees, #teas {
   text-align: center;
   margin: 3rem 0;
 }
@@ -147,7 +147,7 @@ nav li:not(:first-child) a:hover {
   border-left: 1px dotted #dddddd;
   height: 5rem;
 }
-#features div {
+#featured div {
   display: inline-block;
   height: 250px;
   width: 31.8%;
@@ -155,8 +155,17 @@ nav li:not(:first-child) a:hover {
   background-color: #442400;
   color: #FFF;
 }
-#features div:last-child {
+#featured div:last-child {
   background-color: #341c00;
+}
+#cold-brew {
+  background: url("../assets/Cold-Brew-Sparkling-Orange.jpg");
+}
+#gastro {
+  background: url("../assets/JHornig-Kaffee-fuer-die-Gastro.jpg");
+}
+#buro {
+  background: url("../assets/JHornig-Office-As-A-Service-1920x1178.jpg");
 }
 .divider div {
   display: inline-block;
@@ -167,7 +176,7 @@ nav li:not(:first-child) a:hover {
   width: 20vw;
   color: #ededed;
 }
-.special {
+.discount {
   position: absolute;
   height: 2.5rem;
   width: 2.5rem;
@@ -175,16 +184,37 @@ nav li:not(:first-child) a:hover {
   border-radius: 100%;
   color: #FFF;
 }
-#coffees div:not(.special), #teas div {
-  height: 65%;
-  width: 12%;
-  margin: 0 6%;
+#spezial {
+  background: url("../assets/JHornig-Spezial-Ganze-Bohne-247x346.jpg");
+}
+#classico {
+  background: url("../assets/JHornig-Caffe-Crema-Classico-Ganze-Bohne-247x346.jpg");
+}
+#bio {
+  background: url("../assets/JHornig-Caffe-Crema-Bio-Ganze-Bohne-247x346.jpg");
+}
+#entcoff {
+  background: url("../assets/JHornig-Entcoff-Ganze-Bohne-247x346.jpg");
 }
 #coffees div.product, #teas div.product {
-  border: 1px dotted black;
   height: 250px;
-  width: 100%;
   margin: 0; /* already nested */
+}
+#coffees div:not(.discount), #teas div {
+  height: 200px;
+  width: 25%;
+}
+#früchtetee {
+  background: url("../assets/JHornig-Bio-Fruechte-Tee-1-247x346.jpeg");
+}
+#früchte {
+  background: url("../assets/JHornig-Bio-Wilde-Fruechte-Tee-247x346.jpeg");
+}
+#pfefferminze {
+  background: url("../assets/JHornig-Bio-Pfefferminze-Tee-247x346.jpeg");
+}
+#orange {
+  background: url("../assets/JHornig-Bio-Orange-Tee-247x346.jpeg");
 }
 #services {
   width: 100%;
