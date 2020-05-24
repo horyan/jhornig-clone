@@ -345,7 +345,7 @@ nav li:not(:first-child) a:hover {
 }
 #blog {
   width: 250%;
-  height: 380px;
+  height: 360px;
 }
 .h-center {
   text-align: center;
@@ -393,12 +393,18 @@ nav li:not(:first-child) a:hover {
 }
 #info {
   background-color: #f3ebe3;
-  height: 1000px;
+  height: 950px;
   text-align: center;
 }
-#info hr {
+.splitter {
+  color: #e7dfd7;
+}
+#info hr:not(.splitter) {
   width: 20px;
   color: #dad3cc;
+  height: 4px;
+  background-color: #dad3cc;
+  border: none;
 }
 #info div {
   margin: 1.5rem;
@@ -406,15 +412,15 @@ nav li:not(:first-child) a:hover {
   width: 40%;
   vertical-align: top;
   position: relative;
-  height: 17%;
-  border: 1px dotted #000;
+  height: 150px;
+  /*border: 1px dotted #000;*/
 }
-#info div * {
+#info div a, #info hr {
   margin: .5rem 0;
 }
 #info .contact { /* specificity */
-  width: 20%;
-  height: 23%;
+  width: 17%;
+  height: 220px;
 }
 #info p {
   color: #777777;
