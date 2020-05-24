@@ -6,6 +6,7 @@
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 header {
   background-color: #372f2c;
@@ -342,19 +343,17 @@ nav li:not(:first-child) a:hover {
 #register-btn:hover {
   background-color: #442400;
 }
-#panels {
-  width: 300%;
-  height: 470px;
+#panel {
+  width: 250%;
+  height: 420px;
 }
-.panel-item {
-  position: relative;
+.panel-items {
   text-align: center;
-  width: 33.33%;
 }
-.panel-item div {
+.panel-items div {
   height: 400px;
-  width: 20%;
-  margin: 0 2rem;
+  width: 10%;
+  margin: 0 1rem;
   border: 1px dotted black;
 }
 #info {
@@ -409,4 +408,23 @@ footer a {
 footer p {
   color: #9b9796;
   margin-top: .7rem;
+}
+/* sliders */
+.prev, .next {
+  visibility: hidden;
+  font-size: 2rem;
+}
+.prev {
+  float: left;
+}
+.next {
+  float: right;
+}
+/* banner */
+#banner:hover > div > button, #panels:hover > div > button {
+  visibility: visible;
+}
+.display-b {
+  position: relative;
+  right: 50%;
 }
