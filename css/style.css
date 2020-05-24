@@ -303,6 +303,8 @@ nav li:not(:first-child) a:hover {
   height: 400px;
   background-color: #2a1600;
   color: #FFF;
+  background-image: url("../assets/Kaffee-Newsletter.jpg"), url("../assets/5€_gutschein_button_1.png");
+  background-size: 100% 100%;
 }
 #newsletter div {
   width: 38%;
