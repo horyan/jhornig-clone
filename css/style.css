@@ -447,7 +447,10 @@ footer p {
 /* sliders */
 .prev, .next {
   visibility: hidden;
-  font-size: 2rem;
+  font-size: 1rem;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
 }
 .prev {
   float: left;
