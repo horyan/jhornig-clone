@@ -278,13 +278,13 @@ nav li:not(:first-child) a:hover {
   background: url("../assets/JHornig-Kaffee-richtig-zubereiten.jpg");
   background-size: 100% 100%;
 }
-.w-whole {
+.w-full {
   width: 100%;
 }
-.w-full {
+.w-sub-full {
   width: 99.8%;
 }
-.w-half {
+.w-sub-half {
   width: 49.7%;
 }
 .ib {
