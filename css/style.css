@@ -343,18 +343,53 @@ nav li:not(:first-child) a:hover {
 #register-btn:hover {
   background-color: #442400;
 }
-#panel {
+#blog {
   width: 250%;
-  height: 420px;
+  height: 380px;
 }
-.panel-items {
+.h-center {
   text-align: center;
 }
-.panel-items div {
-  height: 400px;
+.panel > div {
   width: 10%;
   margin: 0 1rem;
   border: 1px dotted black;
+}
+.panel-item {
+  width: 100%;
+  height: 180px;
+}
+#blog-a {
+  background-image: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg");
+  background-size: 100% 100%;
+}
+#blog-b {
+  background-image: url("../assets/JH-So_schmeckt_Kaffee_zuhause_wie_in_der_Kaffeebar-800x533.jpg");
+  background-size: 100% 100%;
+}
+#blog-c {
+  background-image: url("../assets/JHornig_Entkoffeinierter_Kaffee_Kaffeewissen_Blogpost-800x518.jpg");
+  background-size: 100% 100%;
+}
+#blog-d {
+  background-image: url("../assets/Hornig-Tarrazu-Gegend_2-2-800x450.jpg");
+  background-size: 100% 100%;
+}
+#blog-e {
+  background-image: url("../assets/J.Hornig_Blogpost_Kopenhafen_Coffee_Trip_Tipps-2-800x533.jpg");
+  background-size: 100% 100%;
+}
+#blog-f {
+  background-image: url("../assets/Kaffeetipps-fuer-Budapest-Blogbeitrag-JHornig-800x464.jpg");
+  background-size: 100% 100%;
+}
+#blog-g {
+  background-image: url("../assets/JHornig-Latte-Heart-800x534.jpg");
+  background-size: 100% 100%;
+}
+#blog-h {
+  background-image: url("../assets/Kaffeetrends-2020-Schwarzer-Kaffee-Cold-Brew-und-mehr-800x464.jpg");
+  background-size: 100% 100%;
 }
 #info {
   background-color: #f3ebe3;
@@ -421,7 +456,7 @@ footer p {
   float: right;
 }
 /* banner */
-#banner:hover > div > button, #panels:hover > div > button {
+#banner:hover > div > button {
   visibility: visible;
 }
 .display-b {
