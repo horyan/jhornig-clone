@@ -129,26 +129,27 @@ nav li:not(:first-child) a:hover {
   text-align: center;
   margin: 3rem 0;
 }
-#policies div {
+#policies > div {
   margin: 0 1rem;
   vertical-align: top;
   height: 100px;
+  padding: 0 2.5rem;
+  width: 25%;
 }
-#policies div:not(.delimiter) {
-  width: 20%;
+.checkmark {
+  background: url("../assets/checkmark.png") no-repeat;
 }
-#policies p {
+#policies h3 {
   color: #555555;
   text-align: left;
 }
-#policies span {
+#policies h4 {
   color: #777777;
-  display: block;
   padding: 1rem 0;
+  text-align: left;
 }
 .delimiter {
   border-left: 1px dotted #dddddd;
-  height: 5rem;
 }
 #featured div {
   display: inline-block;
@@ -236,10 +237,6 @@ nav li:not(:first-child) a:hover {
 #services {
   width: 100%;
   height: 504px;
-}
-.rel-top {
-  position: relative;
-  vertical-align: top;
 }
 #services {
   text-align: center;
