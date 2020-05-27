@@ -236,7 +236,7 @@ nav li:not(:first-child) a:hover {
 }
 #services {
   width: 100%;
-  height: 504px;
+  height: 500px;
 }
 #services {
   text-align: center;
@@ -244,45 +244,41 @@ nav li:not(:first-child) a:hover {
 #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
   background-color: #442400;
   color: #FFF;
-  margin: 1px;
 }
 #service-a, #service-b, #service-c, #service-e, #service-f {
-  height: 252px;
+  height: 250px;
 }
 #service-a {
   background-color: #cccccc;
-  background: url("../assets/JHornig-Kaffeebar-1070-Wien.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Kaffeebar-1070-Wien.jpg") center;
+  background-size: cover;
 }
 #service-b {
-  background: url("../assets/Wie-wir-bei-JHornig-roesten.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/Wie-wir-bei-JHornig-roesten.jpg") center;
+  background-size: cover;
 }
 #service-c {
-  background: url("../assets/JHornig-Kaffeemobil.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Kaffeemobil.jpg") center;
+  background-size: cover;
 }
 #service-d {
-  height: 505px;
-  background: url("../assets/JHornig-Barista-Kurse.jpg");
-  background-size: 100% 100%;
+  height: 500px;
+  background: url("../assets/JHornig-Barista-Kurse.jpg") center;
+  background-size: cover;
 }
 #service-e {
-  background: url("../assets/JHornig-Direct-Trade.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Direct-Trade.jpg") center;
+  background-size: cover;
 }
 #service-f {
-  background: url("../assets/JHornig-Kaffee-richtig-zubereiten.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Kaffee-richtig-zubereiten.jpg") center;
+  background-size: cover;
 }
 .w-full {
   width: 100%;
 }
-.w-sub-full {
-  width: 99.8%;
-}
-.w-sub-half {
-  width: 49.7%;
+.w-half {
+  width: 50%;
 }
 .ib {
   display: inline-block;
