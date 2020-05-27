@@ -130,7 +130,7 @@ nav li:not(:first-child) a:hover {
 #policies > div {
   margin: 0 1rem;
   vertical-align: top;
-  height: 100px;
+  height: 100%;
   padding: 0 2.5rem;
   width: 25%;
 }
@@ -156,21 +156,22 @@ nav li:not(:first-child) a:hover {
   margin: 0 .5rem;
   background-color: #442400;
   color: #FFF;
+  vertical-align: top;
 }
 #featured div:last-child {
   background-color: #341c00;
 }
 #cold-brew {
-  background: url("../assets/Cold-Brew-Sparkling-Orange.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/Cold-Brew-Sparkling-Orange.jpg") center;
+  background-size: cover;
 }
 #gastro {
-  background: url("../assets/JHornig-Kaffee-fuer-die-Gastro.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Kaffee-fuer-die-Gastro.jpg") center;
+  background-size: cover;
 }
 #buro {
-  background: url("../assets/JHornig-Office-As-A-Service-1920x1178.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Office-As-A-Service-1920x1178.jpg") center;
+  background-size: cover;
 }
 .divider div {
   display: inline-block;
@@ -178,7 +179,7 @@ nav li:not(:first-child) a:hover {
   color: #555555;
 }
 .divider hr {
-  width: 20vw;
+  width: 10vw;
   color: #ededed;
 }
 .discount {
@@ -190,22 +191,20 @@ nav li:not(:first-child) a:hover {
   color: #FFF;
 }
 #spezial {
-  background: url("../assets/JHornig-Spezial-Ganze-Bohne-247x346.jpg");
-  background-size: 100% 100%;
-  width: 100%;
-  height: 300px;
+  background: url("../assets/JHornig-Spezial-Ganze-Bohne-247x346.jpg") center;
+  background-size: cover;
 }
 #classico {
-  background: url("../assets/JHornig-Caffe-Crema-Classico-Ganze-Bohne-247x346.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Caffe-Crema-Classico-Ganze-Bohne-247x346.jpg") center;
+  background-size: cover;
 }
 #bio {
-  background: url("../assets/JHornig-Caffe-Crema-Bio-Ganze-Bohne-247x346.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Caffe-Crema-Bio-Ganze-Bohne-247x346.jpg") center;
+  background-size: cover;
 }
 #entcoff {
-  background: url("../assets/JHornig-Entcoff-Ganze-Bohne-247x346.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Entcoff-Ganze-Bohne-247x346.jpg") center;
+  background-size: cover;
 }
 .product {
   height: 450px;
@@ -217,20 +216,20 @@ nav li:not(:first-child) a:hover {
   height: 300px;
 }
 #früchtetee {
-  background: url("../assets/JHornig-Bio-Fruechte-Tee-1-247x346.jpeg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Bio-Fruechte-Tee-1-247x346.jpeg") center;
+  background-size: cover;
 }
 #früchte {
-  background: url("../assets/JHornig-Bio-Wilde-Fruechte-Tee-247x346.jpeg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Bio-Wilde-Fruechte-Tee-247x346.jpeg") center;
+  background-size: cover;
 }
 #pfefferminze {
-  background: url("../assets/JHornig-Bio-Pfefferminze-Tee-247x346.jpeg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Bio-Pfefferminze-Tee-247x346.jpeg") center;
+  background-size: cover;
 }
 #orange {
-  background: url("../assets/JHornig-Bio-Orange-Tee-247x346.jpeg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Bio-Orange-Tee-247x346.jpeg") center;
+  background-size: cover;
 }
 #services {
   width: 100%;
@@ -292,11 +291,12 @@ nav li:not(:first-child) a:hover {
   vertical-align: top;
 }
 #newsletter {
-  height: 400px;
+  height: 550px;
   background-color: #2a1600;
   color: #FFF;
-  background-image: url("../assets/Kaffee-Newsletter.jpg"), url("../assets/5€_gutschein_button_1.png");
-  background-size: 100% 100%;
+  background: url("../assets/Kaffee-Newsletter.jpg") center;
+  /* url("../assets/5€_gutschein_button_1.png") */
+  background-size: cover;
 }
 #newsletter div {
   width: 38%;
@@ -351,36 +351,36 @@ nav li:not(:first-child) a:hover {
   height: 180px;
 }
 #blog-a {
-  background-image: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;
+  background-size: cover;
 }
 #blog-b {
-  background-image: url("../assets/JH-So_schmeckt_Kaffee_zuhause_wie_in_der_Kaffeebar-800x533.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JH-So_schmeckt_Kaffee_zuhause_wie_in_der_Kaffeebar-800x533.jpg") center;
+  background-size: cover;
 }
 #blog-c {
-  background-image: url("../assets/JHornig_Entkoffeinierter_Kaffee_Kaffeewissen_Blogpost-800x518.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig_Entkoffeinierter_Kaffee_Kaffeewissen_Blogpost-800x518.jpg") center;
+  background-size: cover;
 }
 #blog-d {
-  background-image: url("../assets/Hornig-Tarrazu-Gegend_2-2-800x450.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/Hornig-Tarrazu-Gegend_2-2-800x450.jpg") center;
+  background-size: cover;
 }
 #blog-e {
-  background-image: url("../assets/J.Hornig_Blogpost_Kopenhafen_Coffee_Trip_Tipps-2-800x533.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/J.Hornig_Blogpost_Kopenhafen_Coffee_Trip_Tipps-2-800x533.jpg") center;
+  background-size: cover;
 }
 #blog-f {
-  background-image: url("../assets/Kaffeetipps-fuer-Budapest-Blogbeitrag-JHornig-800x464.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/Kaffeetipps-fuer-Budapest-Blogbeitrag-JHornig-800x464.jpg") center;
+  background-size: cover;
 }
 #blog-g {
-  background-image: url("../assets/JHornig-Latte-Heart-800x534.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/JHornig-Latte-Heart-800x534.jpg") center;
+  background-size: cover;
 }
 #blog-h {
-  background-image: url("../assets/Kaffeetrends-2020-Schwarzer-Kaffee-Cold-Brew-und-mehr-800x464.jpg");
-  background-size: 100% 100%;
+  background: url("../assets/Kaffeetrends-2020-Schwarzer-Kaffee-Cold-Brew-und-mehr-800x464.jpg") center;
+  background-size: cover;
 }
 #info {
   background-color: #f3ebe3;
