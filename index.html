@@ -19,9 +19,9 @@
       </ul>
     </header>
     <nav>
-      <ul class="flex v-center">
+      <ul class="flex-center">
         <li>
-          <a href="/"><div id="logo2"></div></a>
+          <a href="/"><div id="logo"></div></a>
         </li>
         <li>
           <a href="/shop/">Shop</a>
@@ -57,23 +57,23 @@
       </ul>
     </nav>
     <section id="banner" class="row">
-      <div id="banner-a" class="banner-item">
+      <div id="primary-banner">
         <button id="a-prev" class="prev"><span>&lt;</span></button>
-        <div id="a" class="content">
+        <div id="primary-cta" class="content">
           <h2>Alles für die Tasse</h2>
           <h3>J. Hornig Kaffee & Tee online kaufen</h3>
-          <a class="button primary" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
-          <a class="button secondary" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
+          <a class="primary btn" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
+          <a class="secondary btn" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
         </div>
         <button id="a-next" class="next"><span>&gt;</span></button>
       </div>
-      <div id="banner-b" class="banner-item">
+      <div id="secondary-banner">
         <button id="b-prev" class="prev"><span>&lt;</span></button>
-        <div id="b" class="content">
+        <div id="secondary-cta" class="content">
           <h2>Neu im Sortiment</h2>
           <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
           <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
-          <a class="button primary" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
+          <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
         </div>
         <button id="b-next" class="next"><span>&gt;</span></button>
       </div>
@@ -457,7 +457,7 @@
           function toggleBanner(){
             bannerB.classList.toggle('display-b');
           }
-          const bannerB = document.getElementById('banner-b');
+          const bannerB = document.getElementById('secondary-banner');
 
           const aPrev = document.getElementById('a-prev');
           const aNext = document.getElementById('a-next');

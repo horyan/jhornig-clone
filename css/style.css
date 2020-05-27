@@ -27,11 +27,11 @@ nav {
   top: 0;
   z-index: 1;
 }
-#logo2 {
-  background-image: url("../assets/JHornig-Logo-rot.png");
-  width: 150px;
-  height: 50px;
-  background-size: 150px 50px;
+#logo {
+  background: url("../assets/JHornig-Logo-rot.png") center;
+  width: calc(400px/3);
+  height: calc(159px/3);
+  background-size: cover;
   margin-right: 2rem;
 }
 li {
@@ -50,10 +50,8 @@ nav a {
 nav li:not(:first-child) a:hover {
   border-bottom: 3px solid #442400;
 }
-.flex {
+.flex-center {
   display: flex;
-}
-.v-center {
   align-items: center;
 }
 .row {
@@ -68,27 +66,27 @@ nav li:not(:first-child) a:hover {
   width: 200%;
   height: 500px;
 }
-.banner-item {
+#banner > div {
   width: 50%;
   height: 100%;
   color: #FFF;
   vertical-align: top; /* pre-adjust */
 }
-#banner-a {
-  background: url("../assets/JHornig-Kaffee-und-Tee-kaufen-2.jpg");
+#primary-banner {
+  background: url("../assets/JHornig-Kaffee-und-Tee-kaufen-2.jpg") center;
+  background-size: cover;
 }
-#banner-b {
-  background: url("../assets/JHornig-LaJoya-Neu-im-Sortiment-1.jpg");
-  background-position: center;
-  background-size: 100% 100%;
+#secondary-banner {
+  background: url("../assets/JHornig-LaJoya-Neu-im-Sortiment-1.jpg") center;
+  background-size: cover;
 }
-#a {
+#primary-cta {
   width: 33%;
   height: 40%;
   top: 40%;
   left: 2%;
 }
-#b {
+#secondary-cta {
   width: 32%;
   height: 50%;
   top: 30%;
@@ -102,7 +100,7 @@ nav li:not(:first-child) a:hover {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.button {
+.btn {
   border: 2px solid #FFF;
   padding: .7rem 2rem;
   margin: 0 .5rem;
