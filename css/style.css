@@ -236,19 +236,25 @@ nav li:not(:first-child) a:hover {
   text-align: center;
   padding: 1px;
 }
+.container {
+  padding: 1px;
+}
 .gutter-wrap {
   padding: 1px;
   height: 250px;
+  overflow: hidden;
 }
 .gutter-wrap-s {
   padding: 1px;
   height: 500px;
+  overflow: hidden;
 }
 #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
   background-color: #442400;
   color: #FFF;
   width: 100%;
   height: 100%;
+  transition: transform .5s;
 }
 #service-a {
   background-color: #cccccc;
@@ -463,4 +469,8 @@ footer p {
 .display-b {
   position: relative;
   right: 50%;
+}
+/* zoom */
+.zoom:hover {
+  transform: scale(1.05);
 }
