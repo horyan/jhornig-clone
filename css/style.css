@@ -234,17 +234,21 @@ nav li:not(:first-child) a:hover {
 #services {
   height: 500px;
   text-align: center;
-  padding: 3px;
-}
-#gutter-wrap {
   padding: 1px;
+}
+.gutter-wrap {
+  padding: 1px;
+  height: 250px;
+}
+.gutter-wrap-s {
+  padding: 1px;
+  height: 500px;
 }
 #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
   background-color: #442400;
   color: #FFF;
-}
-#service-a, #service-b, #service-c, #service-e, #service-f {
-  height: 250px;
+  width: 100%;
+  height: 100%;
 }
 #service-a {
   background-color: #cccccc;
@@ -260,7 +264,6 @@ nav li:not(:first-child) a:hover {
   background-size: cover;
 }
 #service-d {
-  height: 500px;
   background: url("../assets/JHornig-Barista-Kurse.jpg") center;
   background-size: cover;
 }
@@ -287,8 +290,7 @@ nav li:not(:first-child) a:hover {
 .font {
   font-size: 16px;
 }
-.rel-top {
-  position: relative;
+.v-top {
   vertical-align: top;
 }
 #newsletter {
