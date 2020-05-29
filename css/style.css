@@ -234,20 +234,10 @@ nav li:not(:first-child) a:hover {
 #services {
   height: 500px;
   text-align: center;
-  padding: 1px;
-}
-.container {
-  padding: 1px;
 }
 .gutter-wrap {
-  padding: 1px;
-  height: 250px;
   overflow: hidden;
-}
-.gutter-wrap-s {
-  padding: 1px;
-  height: 500px;
-  overflow: hidden;
+  padding: 1.5px;
 }
 #service-a, #service-b, #service-c, #service-d, #service-e, #service-f {
   background-color: #442400;
@@ -255,6 +245,9 @@ nav li:not(:first-child) a:hover {
   width: 100%;
   height: 100%;
   transition: transform .5s;
+}
+#service-a, #service-b, #service-c, #service-e, #service-f {
+  height: 250px;
 }
 #service-a {
   background-color: #cccccc;
@@ -272,6 +265,7 @@ nav li:not(:first-child) a:hover {
 #service-d {
   background: url("../assets/JHornig-Barista-Kurse.jpg") center;
   background-size: cover;
+  height: 500px;
 }
 #service-e {
   background: url("../assets/JHornig-Direct-Trade.jpg") center;
@@ -471,6 +465,9 @@ footer p {
   right: 50%;
 }
 /* zoom */
-.zoom:hover {
+.zoom:hover img {
   transform: scale(1.05);
+}
+.caption {
+  position: absolute;
 }
