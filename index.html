@@ -67,15 +67,17 @@
         </div>
         <button id="a-next" class="next"><span>&gt;</span></button>
       </div>
-      <div id="secondary-banner">
-        <button id="b-prev" class="prev"><span>&lt;</span></button>
-        <div id="secondary-cta" class="content">
-          <h2>Neu im Sortiment</h2>
-          <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
-          <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
-          <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
+      <div id="overlay">
+        <div id="secondary-banner">
+          <button id="b-prev" class="prev"><span>&lt;</span></button>
+          <div id="secondary-cta" class="content">
+            <h2>Neu im Sortiment</h2>
+            <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
+            <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
+            <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
+          </div>
+          <button id="b-next" class="next"><span>&gt;</span></button>
         </div>
-        <button id="b-next" class="next"><span>&gt;</span></button>
       </div>
     </section>
     <section id="policies" class="row">
@@ -493,9 +495,9 @@
           // banner prototype
           // TODO: dir-specific slide (CSS?)
           function toggleBanner(){
-            bannerB.classList.toggle('display-b');
+            bannerB.classList.toggle('show');
           }
-          const bannerB = document.getElementById('secondary-banner');
+          const bannerB = document.getElementById('overlay');
 
           const aPrev = document.getElementById('a-prev');
           const aNext = document.getElementById('a-next');
