@@ -152,11 +152,13 @@ nav li:not(:first-child) a:hover {
 #featured a > div {
   display: inline-block;
   height: 250px;
-  width: 31.8%;
   margin: 0 .5rem;
   background-color: #442400;
   color: #FFF;
   vertical-align: top;
+}
+.w-third {
+  width: 31.8%;
 }
 #featured a > div:last-child {
   background-color: #341c00;
@@ -452,3 +454,8 @@ footer p {
 .rel {
   position: relative;
 }
+/* media query */
+@media (max-width: 850px) {
+  [class*="w-"] {
+    width: 100%;
+  }
