@@ -244,6 +244,7 @@ nav li:not(:first-child) a:hover {
   color: #FFF;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 #service-a, #service-b, #service-c, #service-e, #service-f {
   height: 250px;
@@ -443,15 +444,18 @@ footer p {
   position: relative;
   right: 50%;
 }
-/* zoom */
-.pic {
-  background-size: cover;
-  background-position: center;
-}
+/* target img for zoom */
 .zoom:hover img {
   transform: scale(1.05);
   transition: transform .5s;
 }
 .clip {
   overflow: hidden;
+}
+/* position text */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
