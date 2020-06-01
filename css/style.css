@@ -233,7 +233,7 @@ nav li:not(:first-child) a:hover {
   background-size: cover;
 }
 #services {
-  height: 500px;
+  min-height: 500px;
   text-align: center;
 }
 .gutter-wrap {
@@ -470,3 +470,4 @@ footer p {
   [class*="w-"] {
     width: 100%;
   }
+}
