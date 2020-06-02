@@ -64,20 +64,10 @@ nav li:not(:first-child) a:hover {
 #banner {
   background-color: #542c00;
   height: 500px;
-}
-#overlay {
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-  width: 0;
-  height: 500px;
-  transition: .5s ease;
-}
-.show {
-  width: 100% !important;
-  left: 0 !important;
+  position: relative;
 }
 #primary-banner, #secondary-banner {
+  position: absolute;
   width: 100%;
   height: 100%;
   color: #FFF;
@@ -90,6 +80,7 @@ nav li:not(:first-child) a:hover {
 #secondary-banner {
   background: url("../assets/JHornig-LaJoya-Neu-im-Sortiment-1.jpg") center;
   background-size: cover;
+  right: 100%;
 }
 #primary-cta {
   width: 33%;
@@ -465,25 +456,33 @@ footer p {
 }
 /* sliders */
 .prev, .next {
+  background-color: Transparent;
+  color: #d2d3d3;
+  border: 2px solid #cecfce;
   visibility: hidden;
   font-size: 1rem;
   border-radius: 100%;
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 .prev {
-  float: left;
+  left: 2%;
 }
 .next {
-  float: right;
+  right: 2%;
+}
+.prev:hover, .next:hover {
+  color: #fff;
+  background-color: #552d00;
+  border: 2px solid #552d00;
 }
 /* banner */
-#banner:hover > div > button {
+#banner:hover > button {
   visibility: visible;
-}
-.display-b {
-  position: relative;
-  right: 50%;
 }
 /* target img for zoom */
 .zoom:hover .img {
@@ -499,7 +498,6 @@ footer p {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* TODO: tint */
 .tint {
   background-color: rgba(0,0,0,0.5);
   position: absolute;
@@ -509,12 +507,25 @@ footer p {
 .rel {
   position: relative;
 }
-/* media query */
+/* mobile */
 @media (max-width: 850px) {
   [class*="w-"] {
     width: 100%;
   }
   #service-d {
     height: 250px;
+  }
+  #primary-overlay {
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    width: 100%;
+    height: 500px;
+  }
+  #primary-cta {
+    width: 33%;
+    height: 40%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

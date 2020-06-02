@@ -56,27 +56,24 @@
         </li>
       </ul>
     </nav>
-    <section id="banner" class="row">
-      <div id="primary-banner">
+    <section id="banner">
         <button id="a-prev" class="prev"><span>&lt;</span></button>
+        <button id="a-next" class="next"><span>&gt;</span></button>
+      <div id="primary-banner">
+        <div id="primary-overlay"></div>
         <div id="primary-cta" class="content">
           <h2>Alles für die Tasse</h2>
           <h3>J. Hornig Kaffee & Tee online kaufen</h3>
           <a class="primary btn" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
           <a class="secondary btn" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
         </div>
-        <button id="a-next" class="next"><span>&gt;</span></button>
       </div>
-      <div id="overlay">
-        <div id="secondary-banner">
-          <button id="b-prev" class="prev"><span>&lt;</span></button>
-          <div id="secondary-cta" class="content">
-            <h2>Neu im Sortiment</h2>
-            <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
-            <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
-            <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
-          </div>
-          <button id="b-next" class="next"><span>&gt;</span></button>
+      <div id="secondary-banner">
+        <div id="secondary-cta" class="content">
+          <h2>Neu im Sortiment</h2>
+          <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
+          <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
+          <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
         </div>
       </div>
     </section>
@@ -510,24 +507,9 @@
         <p>© J. Hornig 2020</p>
       </div>
       <script>
-          // banner prototype
-          // TODO: dir-specific slide (CSS?)
-          function toggleBanner(){
-            bannerB.classList.toggle('show');
-          }
-          const bannerB = document.getElementById('overlay');
+          // TODO: banner prototype
 
-          const aPrev = document.getElementById('a-prev');
-          const aNext = document.getElementById('a-next');
-          const bPrev = document.getElementById('b-prev');
-          const bNext = document.getElementById('b-next');
-
-          aPrev.addEventListener('click', toggleBanner);
-          aNext.addEventListener('click', toggleBanner);
-          bPrev.addEventListener('click', toggleBanner);
-          bNext.addEventListener('click', toggleBanner);
-
-          /* panel slider
+          /* TODO: panel slider
           // left btn: move 2, move 3, move 3
           function prevSet() {
           }
