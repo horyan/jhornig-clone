@@ -175,12 +175,12 @@ nav li:not(:first-child) a:hover {
 .img {
   width: 100%;
   height: 100%;
-  transition: all .5s;
+  transition: all .4s;
 }
 #featured a > div {
   display: inline-block;
   height: 250px;
-  margin: 0 .5rem;
+  margin: .5rem .5rem;
   background-color: #442400;
   color: #FFF;
   vertical-align: top;
@@ -269,8 +269,32 @@ nav li:not(:first-child) a:hover {
 #service-a {
   background-color: #cccccc;
 }
+#service-a-img {
+  background: url("../assets/JHornig-Kaffeebar-1070-Wien.jpg") center;
+  background-size: cover;
+}
+#service-b-img {
+  background: url("../assets/Wie-wir-bei-JHornig-roesten.jpg") center;
+  background-size: cover;
+}
+#service-c-img {
+  background: url("../assets/JHornig-Kaffeemobil.jpg") center;
+  background-size: cover;
+}
 #service-d {
   height: 500px;
+}
+#service-d-img {
+  background: url("../assets/JHornig-Barista-Kurse.jpg") center;
+  background-size: cover;
+}
+#service-e-img {
+  background: url("../assets/JHornig-Direct-Trade.jpg") center;
+  background-size: cover;
+}
+#service-f-img {
+  background: url("../assets/JHornig-Kaffee-richtig-zubereiten.jpg") center;
+  background-size: cover;
 }
 .w-full {
   width: 100%;
@@ -489,5 +513,8 @@ footer p {
 @media (max-width: 850px) {
   [class*="w-"] {
     width: 100%;
+  }
+  #service-d {
+    height: 250px;
   }
 }
