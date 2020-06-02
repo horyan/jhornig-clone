@@ -399,7 +399,7 @@ nav li:not(:first-child) a:hover {
 }
 #info {
   background-color: #f3ebe3;
-  height: 1200px;
+  min-height: auto;
   text-align: center;
 }
 .splitter {
@@ -418,14 +418,15 @@ nav li:not(:first-child) a:hover {
   width: 40%;
   vertical-align: top;
   position: relative;
-  height: 255px;
+  min-height: auto;
+  border: 1px solid black;
 }
 #info div a, #info hr {
   margin: .5rem 0;
 }
 #info .contact { /* specificity */
   width: 17%;
-  height: 230px;
+  min-height: auto;
 }
 #info p {
   color: #777777;
