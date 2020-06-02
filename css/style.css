@@ -466,7 +466,6 @@ footer p {
   width: 2.5rem;
   height: 2.5rem;
   position: absolute;
-  z-index: 1;
   top: 50%;
   transform: translate(0, -50%);
 }
