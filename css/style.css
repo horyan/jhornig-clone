@@ -160,6 +160,23 @@ nav li:not(:first-child) a:hover {
 .delimiter {
   border-left: 1px dotted #dddddd;
 }
+#feat-img-1 {
+  background: url("../assets/Cold-Brew-Sparkling-Orange.jpg") center;
+  background-size: cover;
+}
+#feat-img-2 {
+  background: url("../assets/JHornig-Kaffee-fuer-die-Gastro.jpg") center;
+  background-size: cover;
+}
+#feat-img-3 {
+  background: url("../assets/Jhornig-Office-As-A-Service-1920x1178.jpg") center;
+  background-size: cover;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+}
 #featured a > div {
   display: inline-block;
   height: 250px;
@@ -445,9 +462,8 @@ footer p {
   right: 50%;
 }
 /* target img for zoom */
-.zoom:hover img {
+.zoom:hover .img {
   transform: scale(1.05);
-  transition: transform .5s;
 }
 .clip {
   overflow: hidden;
@@ -461,6 +477,10 @@ footer p {
 }
 /* TODO: tint */
 .tint {
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .rel {
   position: relative;
