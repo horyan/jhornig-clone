@@ -188,7 +188,7 @@ nav li:not(:first-child) a:hover {
   color: #555555;
 }
 .divider hr {
-  width: 10vw;
+  width: 30vw;
   color: #ededed;
 }
 .discount {
@@ -527,5 +527,8 @@ footer p {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .divider hr {
+    width: 5vw;
   }
 }
