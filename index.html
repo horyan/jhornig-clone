@@ -494,10 +494,10 @@
     </section>
     <section>
       <div id="banner-body">
-        <div id="img-1" class="img-temp">1</div>
-        <div id="img-2" class="img-temp">2</div>
-        <div id="img-3" class="img-temp">3</div>
-        <div id="img-4" class="img-temp">4</div>
+        <div id="img-1" class="img-temp"></div>
+        <div id="img-2" class="img-temp"></div>
+        <div id="img-3" class="img-temp"></div>
+        <div id="img-4" class="img-temp"></div>
         <button id="left-btn">LEFT</button>
         <button id="right-btn">RIGHT</button>
       </div>
@@ -517,13 +517,10 @@
         <p>© J. Hornig 2020</p>
       </div>
       <script>
-        /* TODO: infinite loop*/
-
-        // global var
+        const imgs = document.getElementsByClassName('img-temp');
         var cnt = 1;
         var dir = '';
 
-        // function obj
         function slideLeft(){
           if (dir === 'right'){
             cnt -= 2;
@@ -566,12 +563,8 @@
           }
         }
 
-        // DOM manipulation
-        const imgs = document.getElementsByClassName('img-temp');
-
         const left = document.getElementById('left-btn');
         const right = document.getElementById('right-btn');
-
         left.addEventListener('click', slideLeft);
         right.addEventListener('click', slideRight);
       </script>

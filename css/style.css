@@ -557,17 +557,21 @@ footer p {
   transition: all .1s;
 }
 #img-1 {
-  background-color: green;
+  background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;
+  background-size: cover;
 }
 #img-2 {
   left: calc(100%/3);
-  background-color: orange;
+  background: url("../assets/JH-So_schmeckt_Kaffee_zuhause_wie_in_der_Kaffeebar-800x533.jpg") center;
+  background-size: cover;
 }
 #img-3 {
   left: calc(100%/1.5);
-  background-color: pink;
+  background: url("../assets/JHornig_Entkoffeinierter_Kaffee_Kaffeewissen_Blogpost-800x518.jpg") center;
+  background-size: cover;
 }
 #img-4 {
   left: 100%;
-  background-color: yellow;
+  background: url("../assets/Hornig-Tarrazu-Gegend_2-2-800x450.jpg") center;
+  background-size: cover;
 }
