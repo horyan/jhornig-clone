@@ -492,15 +492,15 @@
         <hr>
       </div>
     </section>
-    <div id="banner-body">
-      <div id="img-1" class="img">1</div>
-      <div id="img-2" class="img">2</div>
-      <div id="img-3" class="img">3</div>
-      <div id="img-4" class="img">4</div>
-      <button id="left-btn">LEFT</button>
-      <button id="right-btn">RIGHT</button>
-    </div>
     <section>
+      <div id="banner-body">
+        <div id="img-1" class="img-temp">1</div>
+        <div id="img-2" class="img-temp">2</div>
+        <div id="img-3" class="img-temp">3</div>
+        <div id="img-4" class="img-temp">4</div>
+        <button id="left-btn">LEFT</button>
+        <button id="right-btn">RIGHT</button>
+      </div>
     </section>
     <footer>
       <div>
@@ -521,7 +521,7 @@
 
         // global var
         var cnt = 1;
-        var dir = "";
+        var dir = '';
 
         // function obj
         function slideLeft(){
@@ -567,7 +567,7 @@
         }
 
         // DOM manipulation
-        const imgs = document.getElementsByClassName('img');
+        const imgs = document.getElementsByClassName('img-temp');
 
         const left = document.getElementById('left-btn');
         const right = document.getElementById('right-btn');

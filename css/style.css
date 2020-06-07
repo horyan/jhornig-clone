@@ -419,7 +419,6 @@ nav li:not(:first-child) a:hover {
   vertical-align: top;
   position: relative;
   min-height: auto;
-  border: 1px solid black;
 }
 #info div a, #info hr {
   margin: .5rem 0;
@@ -529,10 +528,6 @@ footer p {
   .divider hr {
     width: 10vw;
   }
-  /*#featured a > div {
-    margin: .5rem .5rem;
-    width
-  }*/
 }
 
 /* slider */
@@ -544,7 +539,7 @@ footer p {
   background-color: black;
   overflow-x: hidden;
 }
-button {
+#left-btn, #right-btn {
   position: absolute;
   background-color: blue;
   top: 50%;
@@ -555,10 +550,11 @@ button {
 }
 
 /* 3-column slider */
-.img {
+.img-temp {
   position: absolute;
   height: 100%;
   width: calc(100%/3);
+  transition: all .1s;
 }
 #img-1 {
   background-color: green;
