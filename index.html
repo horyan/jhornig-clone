@@ -492,6 +492,16 @@
         <hr>
       </div>
     </section>
+    <div id="banner-body">
+      <div id="img-1" class="img">1</div>
+      <div id="img-2" class="img">2</div>
+      <div id="img-3" class="img">3</div>
+      <div id="img-4" class="img">4</div>
+      <button id="left-btn">LEFT</button>
+      <button id="right-btn">RIGHT</button>
+    </div>
+    <section>
+    </section>
     <footer>
       <div>
         <ul>
@@ -507,15 +517,63 @@
         <p>© J. Hornig 2020</p>
       </div>
       <script>
-          // TODO: banner prototype
+        /* TODO: infinite loop*/
 
-          /* TODO: panel slider
-          // left btn: move 2, move 3, move 3
-          function prevSet() {
+        // global var
+        var cnt = 1;
+        var dir = "";
+
+        // function obj
+        function slideLeft(){
+          if (dir === 'right'){
+            cnt -= 2;
+            shift = 100*cnt;
+            for (let i = 0; i < imgs.length; ++i){
+              imgs[i].style.transform = `translateX(${shift}%)`;
+            }
+            cnt++;
+          } else /*dir==='' || dir==='left'*/ {
+            shift = 100*cnt;
+            if (dir==='left' && cnt < 0){
+              shift = 100*-1*cnt;
+              for (let i = 0; i < imgs.length; ++i){
+                imgs[i].style.transform = `translateX(${shift}%)`;
+              }
+            } else {
+              for (let i = 0; i < imgs.length; ++i){
+                imgs[i].style.transform = `translateX(-${shift}%)`;
+              }
+            }
+            cnt++;
+            dir = 'left';
           }
-          // right btn: move 3, move 3, move 2
-          function nextSet() {
-          }*/
+        }
+        function slideRight(){
+          if (dir === 'left'){
+            cnt -= 2;
+            shift = 100*-1*cnt;
+            for (let i = 0; i < imgs.length; ++i){
+              imgs[i].style.transform = `translateX(${shift}%)`;
+            }
+            cnt++;
+          } else /*dir==='' || dir==='right'*/ {
+            shift = 100*cnt;
+            for (let i = 0; i < imgs.length; ++i){
+              imgs[i].style.transform = `translateX(${shift}%)`;
+            }
+            cnt++;
+            dir = 'right';
+          }
+        }
+
+        // DOM manipulation
+        const imgs = document.getElementsByClassName('img');
+
+        const left = document.getElementById('left-btn');
+        const right = document.getElementById('right-btn');
+
+        left.addEventListener('click', slideLeft);
+        right.addEventListener('click', slideRight);
       </script>
     </footer>
   </body>

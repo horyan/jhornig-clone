@@ -529,8 +529,49 @@ footer p {
   .divider hr {
     width: 10vw;
   }
-  #featured a > div {
+  /*#featured a > div {
     margin: .5rem .5rem;
     width
-  }
+  }*/
+}
+
+/* slider */
+#banner-body {
+  position: relative;
+  height: 100px;
+  width: 60%;
+  margin: 0 auto;
+  background-color: black;
+  overflow-x: hidden;
+}
+button {
+  position: absolute;
+  background-color: blue;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#right-btn{
+  right: 0;
+}
+
+/* 3-column slider */
+.img {
+  position: absolute;
+  height: 100%;
+  width: calc(100%/3);
+}
+#img-1 {
+  background-color: green;
+}
+#img-2 {
+  left: calc(100%/3);
+  background-color: orange;
+}
+#img-3 {
+  left: calc(100%/1.5);
+  background-color: pink;
+}
+#img-4 {
+  left: 100%;
+  background-color: yellow;
 }
