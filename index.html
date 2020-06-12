@@ -497,7 +497,7 @@
         function slideLeft(){
           if (this.dir === 'right'){
             this.cnt -= 2;
-            this.shift = 100*this.cnt;
+            shift = 100*this.cnt;
             for (let i = 0; i < this.num; ++i){
               this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
             }
