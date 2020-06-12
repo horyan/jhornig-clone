@@ -594,3 +594,6 @@ footer p {
 #right-btn-top, #right-btn-bottom{
   right: 0;
 }
+.banner-img {
+  transition: all .1s;
+}
