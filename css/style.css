@@ -68,7 +68,6 @@ nav li:not(:first-child) a:hover {
 }
 #primary-banner, #secondary-banner {
   position: absolute;
-  width: 100%;
   height: 100%;
   color: #FFF;
   vertical-align: top; /* pre-adjust */
@@ -80,7 +79,6 @@ nav li:not(:first-child) a:hover {
 #secondary-banner {
   background: url("../assets/JHornig-LaJoya-Neu-im-Sortiment-1.jpg") center;
   background-size: cover;
-  right: 100%;
 }
 #primary-cta {
   width: 33%;
@@ -480,7 +478,7 @@ footer p {
   border: 2px solid #552d00;
 }
 /* banner */
-#banner:hover > button {
+#banner:hover button {
   visibility: visible;
 }
 /* target img for zoom */
@@ -572,7 +570,14 @@ footer p {
   width: calc(100%/3);
   transition: all .1s;
 }
-.slider {
+#top {
+  position: relative;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+#bottom {
   position: relative;
   height: 200px;
   width: 80%;
@@ -580,7 +585,7 @@ footer p {
   background-color: black;
   overflow-x: hidden;
 }
-button {
+#blog button {
   position: absolute;
   background-color: blue;
   top: 50%;

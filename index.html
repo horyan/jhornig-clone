@@ -57,25 +57,27 @@
       </ul>
     </nav>
     <section id="banner">
-      <div id="primary-banner">
-        <div id="primary-overlay"></div>
-        <div id="primary-cta" class="content">
-          <h2>Alles für die Tasse</h2>
-          <h3>J. Hornig Kaffee & Tee online kaufen</h3>
-          <a class="primary btn" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
-          <a class="secondary btn" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
+      <div id="top">
+        <div id="primary-banner" class="banner-img">
+          <div id="primary-overlay"></div>
+          <div id="primary-cta" class="content">
+            <h2>Alles für die Tasse</h2>
+            <h3>J. Hornig Kaffee & Tee online kaufen</h3>
+            <a class="primary btn" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
+            <a class="secondary btn" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
+          </div>
         </div>
-      </div>
-      <div id="secondary-banner">
-        <div id="secondary-cta" class="content">
-          <h2>Neu im Sortiment</h2>
-          <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
-          <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
-          <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
+        <div id="secondary-banner" class="banner-img">
+          <div id="secondary-cta" class="content">
+            <h2>Neu im Sortiment</h2>
+            <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
+            <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
+            <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
+          </div>
         </div>
+        <button id="a-prev" class="prev"><span>&lt;</span></button>
+        <button id="a-next" class="next"><span>&gt;</span></button>
       </div>
-      <button id="a-prev" class="prev"><span>&lt;</span></button>
-      <button id="a-next" class="next"><span>&gt;</span></button>
     </section>
     <section id="policies" class="row">
       <div class="checkmark">
@@ -341,7 +343,7 @@
       </div>
     </section>
     <section id="blog">
-      <div id="bottom" class="slider">
+      <div id="bottom">
         <div id="blog-a" class="img-temp"></div>
         <div id="blog-b" class="img-temp"></div>
         <div id="blog-c" class="img-temp"></div>
@@ -443,10 +445,10 @@
         const topSliderConfig = {
           visible: 1,
           scroll: 1,
-          num: document.querySelectorAll('#top .img-temp').length,
-          imgs: document.querySelectorAll('#top .img-temp'),
-          left: document.getElementById('left-btn-top'),
-          right: document.getElementById('right-btn-top'),
+          num: document.querySelectorAll('#top .banner-img').length,
+          imgs: document.querySelectorAll('#top .banner-img'),
+          left: document.getElementById('a-prev'),
+          right: document.getElementById('a-next'),
           cnt: 1,
           dir: ''
         };
@@ -517,7 +519,7 @@
           }
         }
 
-        //initSlider(topSliderConfig);
+        initSlider(topSliderConfig);
         initSlider(bottomSliderConfig);
       </script>
     </footer>
