@@ -341,88 +341,17 @@
       </div>
     </section>
     <section id="blog">
-      <div class="row panel">
-        <!-- add v-top for varying lines -->
-        <div class="h-center">
-          <div id="blog-a" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-b" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-c" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-d" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-e" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-f" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-g" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="h-center">
-          <div id="blog-h" class="panel-item"></div>
-          <h3>subheading</h3>
-          <br>
-          <hr>
-          <h3>description</h3>
-          <br>
-          <br>
-          <br>
-        </div>
+      <div id="bottom" class="slider">
+        <div id="blog-a" class="img-temp"></div>
+        <div id="blog-b" class="img-temp"></div>
+        <div id="blog-c" class="img-temp"></div>
+        <div id="blog-d" class="img-temp"></div>
+        <div id="blog-e" class="img-temp"></div>
+        <div id="blog-f" class="img-temp"></div>
+        <div id="blog-g" class="img-temp"></div>
+        <div id="blog-h" class="img-temp"></div>
+        <button id="left-btn-bottom">LEFT</button>
+        <button id="right-btn-bottom">RIGHT</button>
       </div>
     </section>
     <section id="info" class="row">
@@ -496,16 +425,6 @@
         <hr>
       </div>
     </section>
-    <section>
-      <div id="banner-body">
-        <div id="img-1" class="img-temp"></div>
-        <div id="img-2" class="img-temp"></div>
-        <div id="img-3" class="img-temp"></div>
-        <div id="img-4" class="img-temp"></div>
-        <button id="left-btn">LEFT</button>
-        <button id="right-btn">RIGHT</button>
-      </div>
-    </section>
     <footer>
       <div>
         <ul>
@@ -521,56 +440,85 @@
         <p>© J. Hornig 2020</p>
       </div>
       <script>
-        const imgs = document.getElementsByClassName('img-temp');
-        var cnt = 1;
-        var dir = '';
+        const topSliderConfig = {
+          visible: 1,
+          scroll: 1,
+          num: document.querySelectorAll('#top .img-temp').length,
+          imgs: document.querySelectorAll('#top .img-temp'),
+          left: document.getElementById('left-btn-top'),
+          right: document.getElementById('right-btn-top'),
+          cnt: 1,
+          dir: ''
+        };
+        const bottomSliderConfig = {
+          visible: 3,
+          scroll: 3,
+          num: document.querySelectorAll('#bottom .img-temp').length,
+          imgs: document.querySelectorAll('#bottom .img-temp'),
+          left: document.getElementById('left-btn-bottom'),
+          right: document.getElementById('right-btn-bottom'),
+          cnt: 1,
+          dir: ''
+        };
 
-        function slideLeft(){
-          if (dir === 'right'){
-            cnt -= 2;
-            shift = 100*cnt;
-            for (let i = 0; i < imgs.length; ++i){
-              imgs[i].style.transform = `translateX(${shift}%)`;
+        function initSlider(slider){
+          for (let i = 0; i < slider.num; ++i){
+            slider.imgs[i].style.width = `calc(100%/${slider.visible})`;
+            if (i>0){
+              slider.imgs[i].style.left = `calc(100%/${slider.visible/i})`;
             }
-            cnt++;
+          }
+          slider.left.addEventListener('click', slideLeft.bind(slider));
+          slider.right.addEventListener('click', slideRight.bind(slider));
+        }
+
+        function slideRight(){
+          /*
+            TODO: prepare wrapping
+          */
+          if (this.dir === 'left'){
+            this.cnt -= 2;
+            shift = 100*-1*this.cnt;
+            for (let i = 0; i < this.num; ++i){
+              this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
+            }
+            this.cnt++;
+          } else /*dir==='' || dir==='right'*/ {
+            shift = 100*this.cnt;
+            for (let i = 0; i < this.num; ++i){
+              this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
+            }
+            this.cnt++;
+            this.dir = 'right';
+          }
+        }
+        function slideLeft(){
+          if (this.dir === 'right'){
+            this.cnt -= 2;
+            this.shift = 100*this.cnt;
+            for (let i = 0; i < this.num; ++i){
+              this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
+            }
+            this.cnt++;
           } else /*dir==='' || dir==='left'*/ {
-            shift = 100*cnt;
-            if (dir==='left' && cnt < 0){
-              shift = 100*-1*cnt;
-              for (let i = 0; i < imgs.length; ++i){
-                imgs[i].style.transform = `translateX(${shift}%)`;
+            shift = 100*this.cnt;
+            if (this.dir==='left' && this.cnt < 0){
+              shift = 100*-1*this.cnt;
+              for (let i = 0; i < this.num; ++i){
+                this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
               }
             } else {
-              for (let i = 0; i < imgs.length; ++i){
-                imgs[i].style.transform = `translateX(-${shift}%)`;
+              for (let i = 0; i < this.num; ++i){
+                this.imgs[i].style.transform = `translateX(-${this.scroll*shift}%)`;
               }
             }
-            cnt++;
-            dir = 'left';
-          }
-        }
-        function slideRight(){
-          if (dir === 'left'){
-            cnt -= 2;
-            shift = 100*-1*cnt;
-            for (let i = 0; i < imgs.length; ++i){
-              imgs[i].style.transform = `translateX(${shift}%)`;
-            }
-            cnt++;
-          } else /*dir==='' || dir==='right'*/ {
-            shift = 100*cnt;
-            for (let i = 0; i < imgs.length; ++i){
-              imgs[i].style.transform = `translateX(${shift}%)`;
-            }
-            cnt++;
-            dir = 'right';
+            this.cnt++;
+            this.dir = 'left';
           }
         }
 
-        const left = document.getElementById('left-btn');
-        const right = document.getElementById('right-btn');
-        left.addEventListener('click', slideLeft);
-        right.addEventListener('click', slideRight);
+        //initSlider(topSliderConfig);
+        initSlider(bottomSliderConfig);
       </script>
     </footer>
   </body>
