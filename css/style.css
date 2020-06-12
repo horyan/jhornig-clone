@@ -528,6 +528,30 @@ footer p {
   .divider hr {
     width: 10vw;
   }
+  .product {
+    height: 450px;
+    min-width: 155px;
+    margin: 0 1px;
+  }
+  #info div, #info .contact {
+    width: 100%;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.sm {
+  font-size: 11px;
+}
+
+.product p {
+  margin: .2rem 0;
 }
 
 /* slider */
