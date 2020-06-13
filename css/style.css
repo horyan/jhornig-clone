@@ -538,7 +538,7 @@ footer p {
 }
 /* target img for zoom */
 .zoom:hover .img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 .clip {
   overflow: hidden;
