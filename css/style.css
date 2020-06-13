@@ -528,11 +528,11 @@ footer p {
   }
   .product {
     height: 450px;
-    min-width: 155px;
-    margin: 0 1px;
+    min-width: 25%;
+    margin: 0;
   }
   #info div, #info .contact {
-    width: 100%;
+    width: 95%;
   }
 }
 
