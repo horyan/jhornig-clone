@@ -66,6 +66,16 @@ nav li:not(:first-child) a:hover {
   height: 500px;
   position: relative;
 }
+#top {
+  position: relative;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.banner-img {
+  transition: all .2s;
+}
 #primary-banner, #secondary-banner {
   position: absolute;
   height: 100%;
@@ -222,6 +232,18 @@ nav li:not(:first-child) a:hover {
   width: 100%;
   height: 300px;
 }
+.red {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
+.sm {
+  font-size: 11px;
+}
+.product p {
+  margin: .2rem 0;
+}
 #früchtetee {
   background: url("../assets/JHornig-Bio-Fruechte-Tee-1-247x346.jpeg") center;
   background-size: cover;
@@ -351,17 +373,18 @@ nav li:not(:first-child) a:hover {
   width: 100%;
   height: 300px;
 }
-.h-center {
-  text-align: center;
+#bottom {
+  position: relative;
+  height: 250px;
+  width: 80%;
+  margin: 5px auto;
+  background-color: black;
+  overflow-x: hidden;
 }
-.panel > div {
-  width: 10%;
-  margin: 0 1rem;
-  border: 1px dotted black;
-}
-.panel-item {
-  width: 100%;
-  height: 180px;
+.img-temp {
+  position: absolute;
+  height: 100%;
+  transition: all .2s;
 }
 #blog-a {
   background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;
@@ -394,6 +417,32 @@ nav li:not(:first-child) a:hover {
 #blog-h {
   background: url("../assets/Kaffeetrends-2020-Schwarzer-Kaffee-Cold-Brew-und-mehr-800x464.jpg") center;
   background-size: cover;
+}
+#blog button {
+  border: none;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  opacity: .5;
+  padding: 0 .5rem;
+  transition: all .1s;
+}
+#blog #left-btn-bottom {
+  left: -100px;
+}
+#blog #right-btn-bottom {
+  right: -100px;
+}
+#bottom:hover #left-btn-bottom {
+  left: 0;
+}
+#bottom:hover #right-btn-bottom {
+  right: 0;
+}
+#left-btn-bottom:hover, #right-btn-bottom:hover {
+  opacity: 1;
+  transition: all .1s;
 }
 #info {
   background-color: #f3ebe3;
@@ -540,82 +589,4 @@ footer p {
   #info div, #info .contact {
     width: 95%;
   }
-}
-
-.red {
-  color: red;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.sm {
-  font-size: 11px;
-}
-
-.product p {
-  margin: .2rem 0;
-}
-
-/* slider */
-#left-btn, #right-btn {
-  position: absolute;
-  background-color: blue;
-  top: 50%;
-  transform: translateY(-50%);
-}
-#right-btn{
-  right: 0;
-}
-
-/* 3-column slider */
-.img-temp {
-  position: absolute;
-  height: 100%;
-  transition: all .2s;
-}
-#top {
-  position: relative;
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-#bottom {
-  position: relative;
-  height: 200px;
-  width: 80%;
-  margin: 5px auto;
-  background-color: black;
-  overflow-x: hidden;
-}
-#blog button {
-  border: none;
-  position: absolute;
-  background-color: #fff;
-  top: 0;
-  bottom: 0;
-  opacity: .5;
-  padding: 0 .5rem;
-  transition: all .1s;
-}
-#blog #left-btn-bottom {
-  left: -100px;
-}
-#blog #right-btn-bottom {
-  right: -100px;
-}
-#bottom:hover #left-btn-bottom {
-  left: 0;
-}
-#bottom:hover #right-btn-bottom {
-  right: 0;
-}
-#left-btn-bottom:hover, #right-btn-bottom:hover {
-  opacity: 1;
-  transition: all .1s;
-}
-.banner-img {
-  transition: all .2s;
 }
