@@ -57,27 +57,36 @@
       </ul>
     </nav>
     <section id="banner">
+
       <div id="top">
-        <div id="primary-banner" class="banner-img">
-          <div id="primary-overlay"></div>
-          <div id="primary-cta" class="content">
+
+        <div class="banner-placeholder banner-img">
+          <div class="overlay"></div>
+          <div class="content">
             <h2>Alles für die Tasse</h2>
             <h3>J. Hornig Kaffee & Tee online kaufen</h3>
             <a class="primary btn" href="/produkt-kategorie/kaffee/">KAFFEE KAUFEN</a>
             <a class="secondary btn" href="/produkt-kategorie/tee/">TEE KAUFEN</a>
           </div>
         </div>
-        <div id="secondary-banner" class="banner-img">
-          <div id="secondary-cta" class="content">
+
+        <div class="banner-placeholder banner-img">
+          <div class="overlay"></div>
+          <div class="content">
             <h2>Neu im Sortiment</h2>
             <h3>SPEZIALITÄTENKAFFEE LA JOYA*</h3>
             <h3 class="light">Direkt gehandelter Spezialitätenkaffee aus Costa Rica mit tropischen und süßlichen Aromen</h3>
             <a class="primary btn" href="/shop/kaffee/ganze_bohne-de/la-joya/">MEHR ERFAHREN</a>
           </div>
         </div>
-        <button id="a-prev" class="prev"><span>&lt;</span></button>
-        <button id="a-next" class="next"><span>&gt;</span></button>
+
       </div>
+
+      
+      <button id="a-prev" class="prev"><span>&lt;</span></button>
+      <button id="a-next" class="next"><span>&gt;</span></button>
+      
+
     </section>
     <section id="policies" class="row">
       <div class="checkmark">
@@ -441,6 +450,10 @@
         </ul>
         <p>© J. Hornig 2020</p>
       </div>
+      <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  crossorigin="anonymous"></script>
       <script>
         const topSliderConfig = {
           visible: 1,
@@ -463,7 +476,21 @@
           dir: ''
         };
 
-        function initSlider(slider){
+        function duplicateSlides(sliderId){
+          let sliderRef = $(`#${sliderId}`)
+          sliderRef.append(sliderRef.html());
+
+        }
+
+        
+
+        function initSlider(slider, sliderId){
+
+          /* Hardcoded, fix this */
+          duplicateSlides(sliderId);
+          slider.num *= 2;
+          topSliderConfig.imgs = document.querySelectorAll('#top .banner-img')
+
           for (let i = 0; i < slider.num; ++i){
             slider.imgs[i].style.width = `calc(100%/${slider.visible})`;
             if (i>0){
@@ -478,6 +505,12 @@
           /*
             TODO: prepare wrapping
           */
+          
+          // Take your slider indices and move the indices to animate to the far left of the screen
+
+          // Animationstep
+
+
           if (this.dir === 'left'){
             this.cnt -= 2;
             shift = 100*-1*this.cnt;
@@ -495,6 +528,9 @@
           }
         }
         function slideLeft(){
+          
+          // Take your slider indices and move the indices to animate to the far right of the screen
+          
           if (this.dir === 'right'){
             this.cnt -= 2;
             shift = 100*this.cnt;
@@ -519,8 +555,8 @@
           }
         }
 
-        initSlider(topSliderConfig);
-        initSlider(bottomSliderConfig);
+        initSlider(topSliderConfig, "top");
+        // initSlider(bottomSliderConfig, "bottom");
       </script>
     </footer>
   </body>
