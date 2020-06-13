@@ -465,12 +465,13 @@ footer p {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+  transition: all .1s;
 }
 .prev {
-  left: 2%;
+  left: 3%;
 }
 .next {
-  right: 2%;
+  right: 3%;
 }
 .prev:hover, .next:hover {
   color: #fff;
@@ -478,8 +479,13 @@ footer p {
   border: 2px solid #552d00;
 }
 /* banner */
-#banner:hover button {
+#banner:hover .prev {
   visibility: visible;
+  left: 2%;
+}
+#banner:hover .next {
+  visibility: visible;
+  right: 2%;
 }
 /* target img for zoom */
 .zoom:hover .img {
@@ -567,8 +573,7 @@ footer p {
 .img-temp {
   position: absolute;
   height: 100%;
-  width: calc(100%/3);
-  transition: all .1s;
+  transition: all .2s;
 }
 #top {
   position: relative;
@@ -586,14 +591,31 @@ footer p {
   overflow-x: hidden;
 }
 #blog button {
+  border: none;
   position: absolute;
-  background-color: blue;
-  top: 50%;
-  transform: translateY(-50%);
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  opacity: .5;
+  padding: 0 .5rem;
+  transition: all .1s;
 }
-#right-btn-top, #right-btn-bottom{
+#blog #left-btn-bottom {
+  left: -100px;
+}
+#blog #right-btn-bottom {
+  right: -100px;
+}
+#bottom:hover #left-btn-bottom {
+  left: 0;
+}
+#bottom:hover #right-btn-bottom {
   right: 0;
 }
-.banner-img {
+#left-btn-bottom:hover, #right-btn-bottom:hover {
+  opacity: 1;
   transition: all .1s;
+}
+.banner-img {
+  transition: all .2s;
 }
