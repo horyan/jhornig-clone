@@ -350,8 +350,8 @@ nav li:not(:first-child) a:hover {
   position: absolute;
   background: url("../assets/5€_gutschein_button_1.png") no-repeat;
   background-size: cover;
-  height: 200px;
-  width: 200px;
+  height: 170px;
+  width: 170px;
   top: 20%;
   left: 60%;
 }
