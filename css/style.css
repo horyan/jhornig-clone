@@ -11,7 +11,7 @@ body {
 header {
   background-color: #372f2c;
   color: #FFF;
-  padding: .85rem 1.8rem;
+  padding: 1.15rem 1.8rem;
   font-size: 12px;
 }
 header li:last-child a {
@@ -22,7 +22,7 @@ header a {
 }
 nav {
   background-color: #FFF;
-  padding: 0 1.8rem;
+  padding: .15rem 1.8rem;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -74,7 +74,7 @@ nav li:not(:first-child) a:hover {
   overflow-x: hidden;
 }
 .banner-img {
-  transition: all .2s;
+  transition: all .5s;
 }
 #primary-banner, #secondary-banner {
   position: absolute;
@@ -384,7 +384,8 @@ nav li:not(:first-child) a:hover {
 .img-temp {
   position: absolute;
   height: 100%;
-  transition: all .2s;
+  transition: all .5s;
+  /* where is hover-off transition */
 }
 #blog-a {
   background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;
@@ -551,7 +552,7 @@ footer p {
   transform: translate(-50%, -50%);
 }
 .tint {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.4);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -568,7 +569,7 @@ footer p {
     height: 250px;
   }
   #primary-overlay {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.4);
     position: absolute;
     width: 100%;
     height: 500px;
@@ -588,5 +589,20 @@ footer p {
   }
   #info div, #info .contact {
     width: 95%;
+  }
+  .collapsable {
+    display: none;
+  }
+  header {
+    text-align: center;
+  }
+  .flex-center {
+    justify-content: center;
+  }
+  #logo {
+    margin-right: 0;
+  }
+  nav li:not(:first-child) {
+    display: none;
   }
 }

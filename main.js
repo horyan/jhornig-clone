@@ -26,8 +26,8 @@ function initSlider(slider){
       slider.imgs[i].style.left = `calc(100%/${slider.visible/i})`;
     }
   }
-  slider.left.addEventListener('click', slideLeft.bind(slider));
-  slider.right.addEventListener('click', slideRight.bind(slider));
+  slider.left.addEventListener('click', slideRight.bind(slider));
+  slider.right.addEventListener('click', slideLeft.bind(slider));
 }
 
 function slideRight(){
