@@ -340,7 +340,7 @@ nav li:not(:first-child) a:hover {
   background-size: cover;
   position: relative;
 }
-#newsletter > div:first-child {
+#newsletter > div > div:first-child {
   width: 38%;
   position: relative;
   left: 10%;
