@@ -64,17 +64,14 @@ nav li:not(:first-child) a:hover {
 #banner {
   background-color: #542c00;
   height: 500px;
-  position: relative;
 }
 #top {
   position: relative;
-  background-color: black;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 .banner-img {
-  transition: all .5s;
+  transition: all .5s ease;
 }
 #primary-banner, #secondary-banner {
   position: absolute;
@@ -91,7 +88,7 @@ nav li:not(:first-child) a:hover {
   background-size: cover;
 }
 #primary-cta {
-  width: 33%;
+  width: 400px;
   height: 40%;
   top: 40%;
   left: 2%;
@@ -174,7 +171,7 @@ nav li:not(:first-child) a:hover {
 .img {
   width: 100%;
   height: 100%;
-  transition: all .4s;
+  transition: all .4s ease;/*for zoom effect*/
 }
 #featured a > div {
   display: inline-block;
@@ -206,6 +203,14 @@ nav li:not(:first-child) a:hover {
   background-color: #e63126;
   border-radius: 100%;
   color: #FFF;
+  top: 0;
+  left: 0;
+}/*v*h center text*/
+.discount p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #spezial {
   background: url("../assets/JHornig-Spezial-Ganze-Bohne-247x346.jpg") center;
@@ -227,6 +232,7 @@ nav li:not(:first-child) a:hover {
   height: 450px;
   width: 15%;
   margin: 0 4%;
+  position: relative;
 }
 .product-item {
   width: 100%;
@@ -241,7 +247,8 @@ nav li:not(:first-child) a:hover {
 .sm {
   font-size: 11px;
 }
-.product p {
+/* exclusive margin on description */
+.product p:not(:last-child) {
   margin: .2rem 0;
 }
 #früchtetee {
@@ -330,14 +337,23 @@ nav li:not(:first-child) a:hover {
   background-color: #2a1600;
   color: #FFF;
   background: url("../assets/Kaffee-Newsletter.jpg") center;
-  /* url("../assets/5€_gutschein_button_1.png") */
   background-size: cover;
+  position: relative;
 }
-#newsletter div {
+#newsletter > div:first-child {
   width: 38%;
   position: relative;
   left: 10%;
   top: 25%;
+}
+#voucher {
+  position: absolute;
+  background: url("../assets/5€_gutschein_button_1.png") no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  top: 20%;
+  left: 60%;
 }
 #newsletter div * {
   margin: .8rem 0;
@@ -384,8 +400,7 @@ nav li:not(:first-child) a:hover {
 .img-temp {
   position: absolute;
   height: 100%;
-  transition: all .5s;
-  /* where is hover-off transition */
+  transition: all .5s ease;
 }
 #blog-a {
   background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;
@@ -427,7 +442,7 @@ nav li:not(:first-child) a:hover {
   bottom: 0;
   opacity: .5;
   padding: 0 .5rem;
-  transition: all .1s;
+  transition: all .1s ease;
 }
 #blog #left-btn-bottom {
   left: -100px;
@@ -575,6 +590,7 @@ footer p {
     height: 500px;
   }
   #primary-cta {
+    width: 250px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -586,6 +602,12 @@ footer p {
     height: 450px;
     min-width: 25%;
     margin: 0;
+  }
+  #voucher {
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 125px;
+    height: 125px;
   }
   #info div, #info .contact {
     width: 95%;
