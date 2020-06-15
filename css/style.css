@@ -595,6 +595,10 @@ footer p {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  #featured a > div {
+    width: 97%;
+    margin: .5rem 0;
+  }
   .divider hr {
     width: 10vw;
   }
