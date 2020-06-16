@@ -19,6 +19,17 @@ const bottomSliderConfig = {
   dir: ''
 };
 
+function checkWidth(){
+  if (window.innerWidth <= 850){
+    bottomSliderConfig.visible = 1;
+    bottomSliderConfig.scroll = 1;
+  } else {
+    bottomSliderConfig.visible = 3;
+    bottomSliderConfig.scroll = 3;
+  }
+    resizeBottomSlider();
+}
+
 function initSlider(slider){
   for (let i = 0; i < slider.num; ++i){
     slider.imgs[i].style.width = `calc(100%/${slider.visible})`;
@@ -28,6 +39,15 @@ function initSlider(slider){
   }
   slider.left.addEventListener('click', slideRight.bind(slider));
   slider.right.addEventListener('click', slideLeft.bind(slider));
+}
+
+function resizeBottomSlider(){
+  for (let i = 0; i < bottomSliderConfig.num; ++i){
+    bottomSliderConfig.imgs[i].style.width = `calc(100%/${bottomSliderConfig.visible})`;
+    if (i>0){
+      bottomSliderConfig.imgs[i].style.left = `calc(100%/${bottomSliderConfig.visible/i})`;
+    }
+  }
 }
 
 function slideRight(){
@@ -50,6 +70,7 @@ function slideRight(){
     this.dir = 'right';
   }
 }
+
 function slideLeft(){
   if (this.dir === 'right'){
     this.cnt -= 2;
@@ -75,5 +96,7 @@ function slideLeft(){
   }
 }
 
+window.onload = checkWidth; /*TODO: hide checkWidth-if mob-transition*/
+window.onresize = checkWidth;
 initSlider(topSliderConfig);
 initSlider(bottomSliderConfig);
