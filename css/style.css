@@ -394,7 +394,6 @@ nav li:not(:first-child) a:hover {
   height: 250px;
   width: 80%;
   margin: 5px auto;
-  background-color: black;
   overflow-x: hidden;
 }
 .img-temp {
@@ -630,5 +629,8 @@ footer p {
   }
   nav li:not(:first-child) {
     display: none;
+  }
+  #bottom {
+    width: 95%;
   }
 }
