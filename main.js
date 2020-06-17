@@ -8,6 +8,7 @@ const topSliderConfig = {
   cnt: 1,
   dir: ''
 };
+
 const bottomSliderConfig = {
   visible: 3,
   scroll: 3,
