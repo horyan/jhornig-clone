@@ -389,9 +389,22 @@ nav li:not(:first-child) a:hover {
   width: 100%;
   height: 300px;
 }
+/*
 #bottom {
   position: relative;
   height: 250px;
+  width: 80%;
+  margin: 5px auto;
+  overflow-x: hidden;
+}
+*/
+#bottom {
+  height: 250px;
+  position: relative;
+}
+#bottom-slider {
+  position: relative;
+  height: 100%;
   width: 80%;
   margin: 5px auto;
   overflow-x: hidden;
@@ -401,35 +414,35 @@ nav li:not(:first-child) a:hover {
   height: 100%;
   transition: all .5s ease;
 }
-#blog-a {
+.blog-a {
   background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;
   background-size: cover;
 }
-#blog-b {
+.blog-b {
   background: url("../assets/JH-So_schmeckt_Kaffee_zuhause_wie_in_der_Kaffeebar-800x533.jpg") center;
   background-size: cover;
 }
-#blog-c {
+.blog-c {
   background: url("../assets/JHornig_Entkoffeinierter_Kaffee_Kaffeewissen_Blogpost-800x518.jpg") center;
   background-size: cover;
 }
-#blog-d {
+.blog-d {
   background: url("../assets/Hornig-Tarrazu-Gegend_2-2-800x450.jpg") center;
   background-size: cover;
 }
-#blog-e {
+.blog-e {
   background: url("../assets/J.Hornig_Blogpost_Kopenhafen_Coffee_Trip_Tipps-2-800x533.jpg") center;
   background-size: cover;
 }
-#blog-f {
+.blog-f {
   background: url("../assets/Kaffeetipps-fuer-Budapest-Blogbeitrag-JHornig-800x464.jpg") center;
   background-size: cover;
 }
-#blog-g {
+.blog-g {
   background: url("../assets/JHornig-Latte-Heart-800x534.jpg") center;
   background-size: cover;
 }
-#blog-h {
+.blog-h {
   background: url("../assets/Kaffeetrends-2020-Schwarzer-Kaffee-Cold-Brew-und-mehr-800x464.jpg") center;
   background-size: cover;
 }
@@ -443,17 +456,21 @@ nav li:not(:first-child) a:hover {
   padding: 0 .5rem;
   transition: all .1s ease;
 }
-#blog #left-btn-bottom {
-  left: -100px;
+#left-btn-bottom {
+  left: 9.5%;
+  visibility: hidden;
 }
-#blog #right-btn-bottom {
-  right: -100px;
+#right-btn-bottom {
+  right: 9.5%;
+  visibility: hidden;
 }
 #bottom:hover #left-btn-bottom {
-  left: 0;
+  left: 10%;
+  visibility: visible;
 }
 #bottom:hover #right-btn-bottom {
-  right: 0;
+  right: 10%;
+  visibility: visible;
 }
 #left-btn-bottom:hover, #right-btn-bottom:hover {
   opacity: 1;
