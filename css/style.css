@@ -62,11 +62,11 @@ nav li:not(:first-child) a:hover {
   font-size: 16px; /* temp structure */
 }
 #banner {
+  position: relative;
   background-color: #542c00;
   height: 500px;
 }
 #top {
-  position: relative;
   height: 100%;
   width: 100%;
 }
