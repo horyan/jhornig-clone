@@ -389,15 +389,6 @@ nav li:not(:first-child) a:hover {
   width: 100%;
   height: 300px;
 }
-/*
-#bottom {
-  position: relative;
-  height: 250px;
-  width: 80%;
-  margin: 5px auto;
-  overflow-x: hidden;
-}
-*/
 #bottom {
   height: 250px;
   position: relative;

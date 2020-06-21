@@ -64,9 +64,11 @@ function resizeBottomSlider(){
 }
 
 function slideRight(){
-  /*
-    TODO: prepare wrapping
-  */
+  // prepare wrapping
+  for (let i = this.num-1, j = 1; i >= this.num/2; --i, ++j){
+    this.imgs[i].style.left = `calc(-100%/${this.visible/j}`;
+  }
+  // TODO: animation step
 
   if (this.dir === 'left'){
     this.cnt -= 2;
