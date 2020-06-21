@@ -73,27 +73,27 @@ nav li:not(:first-child) a:hover {
 .banner-img {
   transition: all .5s ease;
 }
-#primary-banner, #secondary-banner {
+.primary-banner, .secondary-banner {
   position: absolute;
   height: 100%;
   color: #FFF;
   vertical-align: top; /* pre-adjust */
 }
-#primary-banner {
+.primary-banner {
   background: url("../assets/JHornig-Kaffee-und-Tee-kaufen-2.jpg") center;
   background-size: cover;
 }
-#secondary-banner {
+.secondary-banner {
   background: url("../assets/JHornig-LaJoya-Neu-im-Sortiment-1.jpg") center;
   background-size: cover;
 }
-#primary-cta {
+.primary-cta {
   width: 400px;
   height: 40%;
   top: 40%;
   left: 2%;
 }
-#secondary-cta {
+.secondary-cta {
   width: 32%;
   height: 50%;
   top: 30%;
