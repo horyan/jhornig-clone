@@ -1,3 +1,3 @@
 ## jhornig-clone
 
-Learning modern design principles without frameworks and libraries.
+Learning to implement modern website layouts and components.
