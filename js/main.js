@@ -63,6 +63,8 @@ function resizeBottomSlider(){
   }
 }
 
+/* TODO: keep track of indices, prep/animate minimally
+ implement wraparound */
 function slideRight(){
   // prepare wrapping
   for (let i = this.num-1, j = 1; i >= this.num/2; --i, ++j){
