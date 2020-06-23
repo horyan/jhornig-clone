@@ -63,13 +63,16 @@ function resizeBottomSlider(){
   }
 }
 
-/* TODO: keep track of indices, prep/animate minimally
- implement wraparound */
+/* TODO: re-implement. track indices, prep/animate, wraparound
+ * calculate indices to prep
+ * prepare indices
+ * calculate the indices to animate
+ * animate indices
+ * update indices */
+// this.imgs[i].style.transition = 'unset' or 'all .5s ease'
 function slideRight(){
   // prepare wrapping
   for (let i = this.num-1, j = 1; i >= this.num/2; --i, ++j){
-    // unset transition
-    this.imgs[i].style.transition = 'unset';
     this.imgs[i].style.left = `calc(-100%/${this.visible/j}`;
   }
 
@@ -77,16 +80,12 @@ function slideRight(){
     this.cnt -= 2;
     shift = 100*-1*this.cnt;
     for (let i = 0; i < this.num; ++i){
-      // TODO: animate transition
-      this.imgs[i].style.transition = 'all .5s ease';
       this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
     }
     this.cnt++;
   } else /*dir==='' || dir==='right'*/ {
     shift = 100*this.cnt;
     for (let i = 0; i < this.num; ++i){
-      // TODO: animate transition
-      this.imgs[i].style.transition = 'all .5s ease';
       this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
     }
     this.cnt++;

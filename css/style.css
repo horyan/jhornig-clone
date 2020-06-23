@@ -70,9 +70,11 @@ nav li:not(:first-child) a:hover {
   height: 100%;
   width: 100%;
 }
-.banner-img {
+/* animate incrementally with js
+banner-img {
   transition: all .5s ease;
 }
+*/
 .primary-banner, .secondary-banner {
   position: absolute;
   height: 100%;
