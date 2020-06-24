@@ -7,7 +7,8 @@ const topSliderConfig = {
   left: document.getElementById('a-prev'),
   right: document.getElementById('a-next'),
   cnt: 1,
-  dir: ''
+  dir: '',
+  index: 0
 };
 
 const bottomSliderConfig = {
@@ -19,7 +20,8 @@ const bottomSliderConfig = {
   left: document.getElementById('left-btn-bottom'),
   right: document.getElementById('right-btn-bottom'),
   cnt: 1,
-  dir: ''
+  dir: '',
+  index: 0
 };
 
 function duplicateSlides(sliderId){
@@ -63,16 +65,17 @@ function resizeBottomSlider(){
   }
 }
 
-/* TODO: re-implement. track indices, prep/animate, wraparound
- * calculate indices to prep
- * prepare indices
- * calculate the indices to animate
- * animate indices
- * update indices */
+/* TODO: re-implement. prep wraparound, animate indices, update index
 // this.imgs[i].style.transition = 'unset' or 'all .5s ease'
 function slideRight(){
-  // prepare wrapping
-  for (let i = this.num-1, j = 1; i >= this.num/2; --i, ++j){
+  // case: this.visible === 1, this.num === 2*2 
+  // [a0, a1, b0, b1]
+  //  0   1   2   3
+  //  index 0 displayed initially
+  // TODO: calculate indices to prepare depending on current index, prepare index, calculate indices to animate, animate, update current index
+  
+
+  /*for (let i = this.num-1, j = 1; i >= this.num/2; --i, ++j){
     this.imgs[i].style.left = `calc(-100%/${this.visible/j}`;
   }
 
@@ -83,14 +86,14 @@ function slideRight(){
       this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
     }
     this.cnt++;
-  } else /*dir==='' || dir==='right'*/ {
+  } else /*dir==='' || dir==='right'*/ /*{
     shift = 100*this.cnt;
     for (let i = 0; i < this.num; ++i){
       this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
     }
     this.cnt++;
     this.dir = 'right';
-  }
+  }*/
 }
 
 function slideLeft(){
