@@ -49,30 +49,76 @@ function initSlider(slider){
   slider.imgs = document.querySelectorAll(`#${slider.id} > div`);
 
   for (let i = 0; i < slider.num; ++i){
-    slider.imgs[i].style.width = `calc(100%/${slider.visible})`;
+    slider.imgs[i].style.width = `${100/slider.visible}%`;
     if (i>0){
-      slider.imgs[i].style.left = `calc(100%/${slider.visible/i})`;
+      slider.imgs[i].style.left = `${100/slider.visible/i}%`;
     }
   }
-  slider.left.addEventListener('click', slideRight.bind(slider));
+  slider.left.addEventListener('click', prepRight.bind(slider));
   slider.right.addEventListener('click', slideLeft.bind(slider));
 }
 
 function resizeBottomSlider(){
   for (let i = 0; i < bottomSliderConfig.num; ++i){
-    bottomSliderConfig.imgs[i].style.width = `calc(100%/${bottomSliderConfig.visible})`;
+    bottomSliderConfig.imgs[i].style.width = `${100/bottomSliderConfig.visible}%)`;
     if (i>0){
-      bottomSliderConfig.imgs[i].style.left = `calc(100%/${bottomSliderConfig.visible/i})`;
+      bottomSliderConfig.imgs[i].style.left = `${100/(bottomSliderConfig.visible/i)}%`;
+    } else {
+      bottomSliderConfig.imgs[i].style.left = "0%"
     }
   }
 }
+
+
+function prepRight(){
+
+  var indicesToAnimate = [];
+  var newIndex = this.index - this.scroll; // 0 - 3 = -3 
+  var absIndex = 0;
+
+
+  for (var i = 0; i < this.scroll * 2; ++i){
+    var tIndex = newIndex + i;
+
+    if (tIndex < 0) { 
+      tIndex = (this.imgs.length - 1) - Math.abs(tIndex % this.imgs.length); 
+      console.log(`Wraparound - absolute index: ${tIndex}`);
+    }
+
+    if (i < this.scroll) {
+      var posToMove = `-${(100/this.scroll) * (this.scroll -i)}%`
+      console.log(`moving index: ${absIndex + i} to ${posToMove}`)
+      this.imgs[tIndex].style.left = posToMove;
+    }
+
+    indicesToAnimate.push(tIndex);
+  }
+
+
+  // Animate slides
+
+  console.log(`animating:${indicesToAnimate}`)
+
+  for (let i = 0; i < indicesToAnimate.length; ++i){
+    var newLoc = `${parseInt(this.imgs[indicesToAnimate[i]].style.left) + 100}%`;
+    console.log(`animating:${indicesToAnimate[i]} to newloc ${newLoc}`)
+
+    this.imgs[indicesToAnimate[i]].style.left = newLoc;
+  }
+
+  this.index = newIndex;
+
+
+}
+
 
 function slideRight(){
   this.imgs[this.lastIndex].style.transition = 'all .5 ease';
   // first left click proof of concept
   // prep duped numToScroll slides
   for (; this.index <= this.scroll; this.index++){
-    this.imgs[this.num - this.index - 1].style.left = `calc(${100*Math.ceil(this.num - this.index - 1)% this.scroll}%)`;
+    this.imgs[this.num - this.index - 1].style.left = 
+    `calc(${100*Math.ceil(this.num - this.index - 1)% this.scroll}%)`;
   }
   // move curent visible slides
   // animate prepped slides
