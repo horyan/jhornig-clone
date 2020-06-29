@@ -400,12 +400,12 @@ banner-img {
   height: 100%;
   width: 80%;
   margin: 5px auto;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 .img-temp {
   position: absolute;
   height: 100%;
-  transition: all .5s ease;
+  /*transition: all .5s ease;*/
 }
 .blog-a {
   background: url("../assets/Bildcredit_J.-Hornig-Sparkling-Ginger-Lemon_300dpi-1-800x534.jpg") center;

@@ -8,7 +8,8 @@ const topSliderConfig = {
   right: document.getElementById('a-next'),
   cnt: 1,
   dir: '',
-  index: 0
+  index: 0,
+  lastIndex: 0
 };
 
 const bottomSliderConfig = {
@@ -21,7 +22,8 @@ const bottomSliderConfig = {
   right: document.getElementById('right-btn-bottom'),
   cnt: 1,
   dir: '',
-  index: 0
+  index: 0,
+  lastIndex: 0
 };
 
 function duplicateSlides(sliderId){
@@ -65,35 +67,15 @@ function resizeBottomSlider(){
   }
 }
 
-/* TODO: re-implement. prep wraparound, animate indices, update index
-// this.imgs[i].style.transition = 'unset' or 'all .5s ease'
 function slideRight(){
-  // case: this.visible === 1, this.num === 2*2 
-  // [a0, a1, b0, b1]
-  //  0   1   2   3
-  //  index 0 displayed initially
-  // TODO: calculate indices to prepare depending on current index, prepare index, calculate indices to animate, animate, update current index
-  
-
-  /*for (let i = this.num-1, j = 1; i >= this.num/2; --i, ++j){
-    this.imgs[i].style.left = `calc(-100%/${this.visible/j}`;
+  this.imgs[this.lastIndex].style.transition = 'all .5 ease';
+  // first left click proof of concept
+  // prep duped numToScroll slides
+  for (; this.index <= this.scroll; this.index++){
+    this.imgs[this.num - this.index - 1].style.left = `calc(${100*Math.ceil(this.num - this.index - 1)% this.scroll}%)`;
   }
-
-  if (this.dir === 'left'){
-    this.cnt -= 2;
-    shift = 100*-1*this.cnt;
-    for (let i = 0; i < this.num; ++i){
-      this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
-    }
-    this.cnt++;
-  } else /*dir==='' || dir==='right'*/ /*{
-    shift = 100*this.cnt;
-    for (let i = 0; i < this.num; ++i){
-      this.imgs[i].style.transform = `translateX(${this.scroll*shift}%)`;
-    }
-    this.cnt++;
-    this.dir = 'right';
-  }*/
+  // move curent visible slides
+  // animate prepped slides
 }
 
 function slideLeft(){
